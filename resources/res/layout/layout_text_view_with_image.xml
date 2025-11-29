@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:gravity="start"
+        android:id="@+id/tv_number"
+        android:padding="0dp"
+        android:paddingLeft="@dimen/margin_start_end"
+        android:paddingTop="0dp"
+        android:paddingRight="@dimen/margin_start_end"
+        android:paddingBottom="0dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewStart"
+        android:paddingStart="0dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:paddingHorizontal="@dimen/margin_start_end"
+        android:paddingVertical="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TextView.Body2"/>
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_checkmark_outline"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="@dimen/margin_default"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_number"
+        app:layout_constraintStart_toStartOf="@+id/tv_notice"
+        app:layout_constraintTop_toTopOf="@+id/tv_number"/>
+</merge>

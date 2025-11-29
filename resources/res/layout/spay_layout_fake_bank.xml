@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/spay_slfb_root"
+    android:paddingTop="@dimen/spay_content_top_margin_loading_bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/spay_loading_sheet_height"
+    android:transitionName="payTransition">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/spay_slfb_tv_fake_bank_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/spay_fake_bank_title"
+        style="@style/SpayBottomSheet.MainTextStyle"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/spay_slfb_tv_fake_bank_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spay_large_margin"
+        android:text="@string/spay_fake_bank_description"
+        style="@style/SpayBottomSheet.MainTextStyle"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/spay_sclud_cl_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <spay.sdk.view.MerchantLogoCompositeView
+        android:id="@+id/spay_sclud_iv_logo"
+        android:layout_width="@dimen/spay_merch_logo_size"
+        android:layout_height="@dimen/spay_merch_logo_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_gravity="end"
+        android:id="@+id/spay_sclud_iv_user_icon"
+        android:layout_width="@dimen/spay_sclud_iv_user_icon_width"
+        android:layout_height="@dimen/spay_sclud_iv_user_icon_height"
+        android:src="@drawable/spay_ic_user_test"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/SpayCornerSize_50"/>
+</FrameLayout>

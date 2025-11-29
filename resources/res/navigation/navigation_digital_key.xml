@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/digital_code_navigation"
+    app:startDestination="@+id/digitalKeyServiceFragment">
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.main.market.services.digital_keys_service.DigitalKeysServiceFragment"
+        android:id="@+id/digitalKeyServiceFragment">
+        <action
+            android:id="@+id/digitalKeyServicesFragment_to_infoServices"
+            app:destination="@+id/subscription_navigation"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim"/>
+        <action
+            android:id="@+id/action_digitalKeyServiceFragment_to_updateTempCodeDialog"
+            app:destination="@+id/updateTempCodeDialog"/>
+        <action
+            android:id="@+id/action_digitalKeyServiceFragment_to_updatePermCodeDialog"
+            app:destination="@+id/updatePermCodeDialog"/>
+        <action
+            android:id="@+id/action_digitalKeyServiceFragment_to_deleteTempCodeDialog"
+            app:destination="@+id/deleteTempCodeDialog"/>
+        <action
+            android:id="@+id/action_digitalKeyServiceFragment_to_blockingNavigation"
+            app:destination="@+id/blocking_navigation"/>
+    </fragment>
+    <dialog
+        android:name="sputnik.axmor.com.sputnik.ui.main.market.services.digital_keys_service.dialog.UpdateTempCodeDialog"
+        android:id="@+id/updateTempCodeDialog"/>
+    <dialog
+        android:name="sputnik.axmor.com.sputnik.ui.main.market.services.digital_keys_service.dialog.UpdatePermCodeDialog"
+        android:id="@+id/updatePermCodeDialog"/>
+    <dialog
+        android:name="sputnik.axmor.com.sputnik.ui.main.market.services.digital_keys_service.dialog.DeleteCodeDialog"
+        android:id="@+id/deleteTempCodeDialog"/>
+</navigation>

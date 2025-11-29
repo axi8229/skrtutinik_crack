@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/container"
+    android:tag="layout/fragment_flussonic_0"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+    <flussonic.watcher.sdk.presentation.watcher.FlussonicWatcherView
+        android:id="@+id/watcher_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:allowDownload="true"/>
+</LinearLayout>

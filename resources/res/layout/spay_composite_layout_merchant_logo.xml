@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/spay_fl_merchant_logo_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/spay_16dp"
+        app:cardElevation="0dp">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/spay_iv_merchant_logo"
+            android:background="@color/spay_bottom_sheet_background"
+            android:visibility="invisible"
+            android:layout_width="@dimen/spay_merch_logo_size"
+            android:layout_height="@dimen/spay_merch_logo_size"
+            android:src="@drawable/spay_ic_merchant_logo_test"
+            android:scaleType="fitXY"
+            app:shapeAppearanceOverlay="@style/SpayRoundedImageView"
+            app:strokeColor="@color/spay_merchant_logo_outline"
+            app:strokeWidth="@dimen/spay_clml_iv_logo_stoke"/>
+    </androidx.cardview.widget.CardView>
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/spay_shimmer_fl_merchant_logo"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SpayShimmerStyle">
+        <ImageView
+            android:id="@+id/spay_iv_merchant_logo_skeleton"
+            android:layout_width="@dimen/spay_merch_logo_size"
+            android:layout_height="@dimen/spay_merch_logo_size"
+            android:src="@drawable/spay_bg_merchant_logo_shimmer_underlay"/>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</FrameLayout>

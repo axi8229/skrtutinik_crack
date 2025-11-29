@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:background="@drawable/bg_ym_bonuses"
+    android:paddingTop="@dimen/ym_space2XS"
+    android:paddingBottom="@dimen/ym_space2XS"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/ym_space2XL"
+    android:paddingStart="@dimen/ym_spaceXS"
+    android:paddingEnd="@dimen/ym_spaceXS">
+    <ImageView
+        android:id="@+id/ym_bonuses_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/ym_space2XS"
+        app:layout_constraintBottom_toBottomOf="@+id/ym_bonuses_value"
+        app:layout_constraintEnd_toStartOf="@+id/ym_bonuses_value"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ym_bonuses_value"
+        app:srcCompat="@drawable/ic_bonuses"/>
+    <ru.yoomoney.sdk.gui.widget.text.TextCaption1View
+        android:id="@+id/ym_bonuses_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ym_bonuses_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/Text.Caption1.Inverse"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

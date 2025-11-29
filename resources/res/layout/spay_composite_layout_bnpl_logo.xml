@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/spay_fl_card_bnpl_logo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/spay_iv_bnpl_logo"
+        android:visibility="invisible"
+        android:layout_width="@dimen/spay_card_icon_size"
+        android:layout_height="@dimen/spay_card_icon_size"
+        android:scaleType="center"/>
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/spay_shimmer_fl_bnpl_logo"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SpayShimmerStyle">
+        <ImageView
+            android:id="@+id/spay_iv_bnpl_logo_skeleton"
+            android:layout_width="@dimen/spay_card_icon_size"
+            android:layout_height="@dimen/spay_card_icon_size"
+            android:src="@drawable/spay_bg_card_icon_shimmer_underlay"
+            android:scaleType="fitCenter"/>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</FrameLayout>

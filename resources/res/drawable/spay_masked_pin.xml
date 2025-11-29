@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="center">
+        <shape android:shape="oval">
+            <size
+                android:height="@dimen/spay_otp_masked_pin_size"
+                android:width="@dimen/spay_otp_masked_pin_size"/>
+            <solid android:color="@color/spay_otp_code_input_text_color"/>
+        </shape>
+    </item>
+</layer-list>

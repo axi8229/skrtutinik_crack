@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/subscription_navigation"
+    app:startDestination="@+id/servicesInfoFragment">
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.main.market.services.ServicesInfoFragment"
+        android:id="@+id/servicesInfoFragment">
+        <action
+            android:id="@+id/action_servicesInfoFragment_to_bottomCancelSubscription"
+            app:destination="@+id/bottomCancelSubscription"/>
+    </fragment>
+    <dialog
+        android:name="sputnik.axmor.com.sputnik.ui.main.market.subscription.CancelSubscriptionBottomSheet"
+        android:id="@+id/bottomCancelSubscription">
+        <action
+            android:id="@+id/action_bottom_cancel_to_mainHostFragment"
+            app:destination="@+id/mainHostFragment"
+            app:popUpTo="@+id/mainHostFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_bottomCancelSubscription_to_servicesInfoFragment"
+            app:destination="@+id/servicesInfoFragment"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim"
+            app:popUpTo="@+id/servicesInfoFragment"
+            app:popUpToInclusive="true"/>
+    </dialog>
+</navigation>

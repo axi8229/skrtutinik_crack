@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_default_widget">10dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_tab_inner">16dp</dimen>
+    <dimen name="size_large_square">52dp</dimen>
+    <dimen name="text_main">14sp</dimen>
+    <dimen name="text_title_1">20sp</dimen>
+    <dimen name="text_title_2">16sp</dimen>
+</resources>

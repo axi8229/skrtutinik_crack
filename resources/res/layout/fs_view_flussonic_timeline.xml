@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <flussonic.watcher.sdk.presentation.timeline.FlussonicBottomBar
+            android:layout_gravity="bottom"
+            android:id="@+id/fs_bottom_bar"
+            android:background="@drawable/fs_gradient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fs_chart_height"/>
+        <flussonic.watcher.sdk.presentation.timeline.FlussonicChartBar
+            android:layout_gravity="bottom"
+            android:id="@+id/fs_chart_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <flussonic.watcher.sdk.presentation.timeline.FlussonicLiveButton
+            android:layout_gravity="end"
+            android:id="@+id/fs_live_slider"
+            android:layout_width="@dimen/fs_baloon_size"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/fs_play_margin_end"
+            android:layout_marginEnd="@dimen/fs_play_margin_end"/>
+        <flussonic.watcher.sdk.presentation.timeline.FlussonicCutRange
+            android:layout_gravity="bottom"
+            android:id="@+id/fs_cut_range"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+</merge>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/call_navigation"
+    app:startDestination="@+id/fragmentReceivingCall">
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.call.ReceivingCallFragment"
+        android:id="@+id/fragmentReceivingCall">
+        <action
+            android:id="@+id/action_fragmentReceivingCall_to_fragmentAnswerCall"
+            app:destination="@+id/fragmentAnswerCall"
+            app:popUpTo="@+id/fragmentReceivingCall"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.call.AnswerCallFragment"
+        android:id="@+id/fragmentAnswerCall"/>
+</navigation>

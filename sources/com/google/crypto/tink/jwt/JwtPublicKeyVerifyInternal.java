@@ -1,0 +1,9 @@
+package com.google.crypto.tink.jwt;
+
+import java.security.GeneralSecurityException;
+import java.util.Optional;
+
+/* loaded from: classes2.dex */
+public interface JwtPublicKeyVerifyInternal {
+    VerifiedJwt verifyAndDecodeWithKid(String compact, JwtValidator validator, Optional<String> kid) throws GeneralSecurityException;
+}

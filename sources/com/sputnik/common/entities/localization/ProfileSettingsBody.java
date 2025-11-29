@@ -1,0 +1,132 @@
+package com.sputnik.common.entities.localization;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+import com.google.gson.annotations.SerializedName;
+import com.sputnik.common.entities.localization.entities.common.TextTitle;
+import kotlin.Metadata;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+import kotlin.jvm.internal.Intrinsics;
+
+/* compiled from: LocalizationModel.kt */
+@Metadata(d1 = {"\u0000<\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\f\b\u0087\b\u0018\u00002\u00020\u0001BO\u0012\n\b\u0002\u0010\u0003\u001a\u0004\u0018\u00010\u0002\u0012\n\b\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0004\u0012\n\b\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u0004\u0012\n\b\u0002\u0010\u0007\u001a\u0004\u0018\u00010\u0004\u0012\n\b\u0002\u0010\b\u001a\u0004\u0018\u00010\u0004\u0012\n\b\u0002\u0010\t\u001a\u0004\u0018\u00010\u0004¢\u0006\u0004\b\n\u0010\u000bJ\u0010\u0010\f\u001a\u00020\u0002HÖ\u0001¢\u0006\u0004\b\f\u0010\rJ\u0010\u0010\u000f\u001a\u00020\u000eHÖ\u0001¢\u0006\u0004\b\u000f\u0010\u0010J\u001a\u0010\u0014\u001a\u00020\u00132\b\u0010\u0012\u001a\u0004\u0018\u00010\u0011HÖ\u0003¢\u0006\u0004\b\u0014\u0010\u0015J\u0010\u0010\u0016\u001a\u00020\u000eHÖ\u0001¢\u0006\u0004\b\u0016\u0010\u0010J \u0010\u001b\u001a\u00020\u001a2\u0006\u0010\u0018\u001a\u00020\u00172\u0006\u0010\u0019\u001a\u00020\u000eHÖ\u0001¢\u0006\u0004\b\u001b\u0010\u001cR\u0019\u0010\u0003\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b\u0003\u0010\u001d\u001a\u0004\b\u001e\u0010\rR\u001c\u0010\u0005\u001a\u0004\u0018\u00010\u00048\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u0005\u0010\u001f\u001a\u0004\b \u0010!R\u001c\u0010\u0006\u001a\u0004\u0018\u00010\u00048\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u0006\u0010\u001f\u001a\u0004\b\"\u0010!R\u001c\u0010\u0007\u001a\u0004\u0018\u00010\u00048\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\u0007\u0010\u001f\u001a\u0004\b#\u0010!R\u001c\u0010\b\u001a\u0004\u0018\u00010\u00048\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\b\u0010\u001f\u001a\u0004\b$\u0010!R\u001c\u0010\t\u001a\u0004\u0018\u00010\u00048\u0006X\u0087\u0004¢\u0006\f\n\u0004\b\t\u0010\u001f\u001a\u0004\b%\u0010!¨\u0006&"}, d2 = {"Lcom/sputnik/common/entities/localization/ProfileSettingsBody;", "Landroid/os/Parcelable;", "", "avatar", "Lcom/sputnik/common/entities/localization/entities/common/TextTitle;", "nameField", "surnameField", "phoneField", "saveButton", "deleteButton", "<init>", "(Ljava/lang/String;Lcom/sputnik/common/entities/localization/entities/common/TextTitle;Lcom/sputnik/common/entities/localization/entities/common/TextTitle;Lcom/sputnik/common/entities/localization/entities/common/TextTitle;Lcom/sputnik/common/entities/localization/entities/common/TextTitle;Lcom/sputnik/common/entities/localization/entities/common/TextTitle;)V", "toString", "()Ljava/lang/String;", "", "hashCode", "()I", "", "other", "", "equals", "(Ljava/lang/Object;)Z", "describeContents", "Landroid/os/Parcel;", "parcel", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "Ljava/lang/String;", "getAvatar", "Lcom/sputnik/common/entities/localization/entities/common/TextTitle;", "getNameField", "()Lcom/sputnik/common/entities/localization/entities/common/TextTitle;", "getSurnameField", "getPhoneField", "getSaveButton", "getDeleteButton", "common_release"}, k = 1, mv = {1, 9, 0}, xi = 48)
+/* loaded from: classes3.dex */
+public final /* data */ class ProfileSettingsBody implements Parcelable {
+    public static final Parcelable.Creator<ProfileSettingsBody> CREATOR = new Creator();
+    private final String avatar;
+
+    @SerializedName("delete_button")
+    private final TextTitle deleteButton;
+
+    @SerializedName("name_textfield")
+    private final TextTitle nameField;
+
+    @SerializedName("phone_textfield")
+    private final TextTitle phoneField;
+
+    @SerializedName("save_button")
+    private final TextTitle saveButton;
+
+    @SerializedName("surname_textfield")
+    private final TextTitle surnameField;
+
+    /* compiled from: LocalizationModel.kt */
+    @Metadata(k = 3, mv = {1, 9, 0}, xi = 48)
+    public static final class Creator implements Parcelable.Creator<ProfileSettingsBody> {
+        /* JADX WARN: Can't rename method to resolve collision */
+        @Override // android.os.Parcelable.Creator
+        public final ProfileSettingsBody createFromParcel(Parcel parcel) {
+            Intrinsics.checkNotNullParameter(parcel, "parcel");
+            return new ProfileSettingsBody(parcel.readString(), (TextTitle) parcel.readParcelable(ProfileSettingsBody.class.getClassLoader()), (TextTitle) parcel.readParcelable(ProfileSettingsBody.class.getClassLoader()), (TextTitle) parcel.readParcelable(ProfileSettingsBody.class.getClassLoader()), (TextTitle) parcel.readParcelable(ProfileSettingsBody.class.getClassLoader()), (TextTitle) parcel.readParcelable(ProfileSettingsBody.class.getClassLoader()));
+        }
+
+        /* JADX WARN: Can't rename method to resolve collision */
+        @Override // android.os.Parcelable.Creator
+        public final ProfileSettingsBody[] newArray(int i) {
+            return new ProfileSettingsBody[i];
+        }
+    }
+
+    public ProfileSettingsBody() {
+        this(null, null, null, null, null, null, 63, null);
+    }
+
+    @Override // android.os.Parcelable
+    public int describeContents() {
+        return 0;
+    }
+
+    public boolean equals(Object other) {
+        if (this == other) {
+            return true;
+        }
+        if (!(other instanceof ProfileSettingsBody)) {
+            return false;
+        }
+        ProfileSettingsBody profileSettingsBody = (ProfileSettingsBody) other;
+        return Intrinsics.areEqual(this.avatar, profileSettingsBody.avatar) && Intrinsics.areEqual(this.nameField, profileSettingsBody.nameField) && Intrinsics.areEqual(this.surnameField, profileSettingsBody.surnameField) && Intrinsics.areEqual(this.phoneField, profileSettingsBody.phoneField) && Intrinsics.areEqual(this.saveButton, profileSettingsBody.saveButton) && Intrinsics.areEqual(this.deleteButton, profileSettingsBody.deleteButton);
+    }
+
+    public int hashCode() {
+        String str = this.avatar;
+        int iHashCode = (str == null ? 0 : str.hashCode()) * 31;
+        TextTitle textTitle = this.nameField;
+        int iHashCode2 = (iHashCode + (textTitle == null ? 0 : textTitle.hashCode())) * 31;
+        TextTitle textTitle2 = this.surnameField;
+        int iHashCode3 = (iHashCode2 + (textTitle2 == null ? 0 : textTitle2.hashCode())) * 31;
+        TextTitle textTitle3 = this.phoneField;
+        int iHashCode4 = (iHashCode3 + (textTitle3 == null ? 0 : textTitle3.hashCode())) * 31;
+        TextTitle textTitle4 = this.saveButton;
+        int iHashCode5 = (iHashCode4 + (textTitle4 == null ? 0 : textTitle4.hashCode())) * 31;
+        TextTitle textTitle5 = this.deleteButton;
+        return iHashCode5 + (textTitle5 != null ? textTitle5.hashCode() : 0);
+    }
+
+    public String toString() {
+        return "ProfileSettingsBody(avatar=" + this.avatar + ", nameField=" + this.nameField + ", surnameField=" + this.surnameField + ", phoneField=" + this.phoneField + ", saveButton=" + this.saveButton + ", deleteButton=" + this.deleteButton + ")";
+    }
+
+    @Override // android.os.Parcelable
+    public void writeToParcel(Parcel parcel, int flags) {
+        Intrinsics.checkNotNullParameter(parcel, "out");
+        parcel.writeString(this.avatar);
+        parcel.writeParcelable(this.nameField, flags);
+        parcel.writeParcelable(this.surnameField, flags);
+        parcel.writeParcelable(this.phoneField, flags);
+        parcel.writeParcelable(this.saveButton, flags);
+        parcel.writeParcelable(this.deleteButton, flags);
+    }
+
+    public ProfileSettingsBody(String str, TextTitle textTitle, TextTitle textTitle2, TextTitle textTitle3, TextTitle textTitle4, TextTitle textTitle5) {
+        this.avatar = str;
+        this.nameField = textTitle;
+        this.surnameField = textTitle2;
+        this.phoneField = textTitle3;
+        this.saveButton = textTitle4;
+        this.deleteButton = textTitle5;
+    }
+
+    public /* synthetic */ ProfileSettingsBody(String str, TextTitle textTitle, TextTitle textTitle2, TextTitle textTitle3, TextTitle textTitle4, TextTitle textTitle5, int i, DefaultConstructorMarker defaultConstructorMarker) {
+        this((i & 1) != 0 ? null : str, (i & 2) != 0 ? null : textTitle, (i & 4) != 0 ? null : textTitle2, (i & 8) != 0 ? null : textTitle3, (i & 16) != 0 ? null : textTitle4, (i & 32) != 0 ? null : textTitle5);
+    }
+
+    public final String getAvatar() {
+        return this.avatar;
+    }
+
+    public final TextTitle getNameField() {
+        return this.nameField;
+    }
+
+    public final TextTitle getPhoneField() {
+        return this.phoneField;
+    }
+
+    public final TextTitle getSaveButton() {
+        return this.saveButton;
+    }
+
+    public final TextTitle getDeleteButton() {
+        return this.deleteButton;
+    }
+}

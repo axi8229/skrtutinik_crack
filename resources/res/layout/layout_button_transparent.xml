@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textColor="@color/track_gray"
+    android:gravity="center"
+    android:id="@+id/btn_cancel"
+    android:background="@android:color/transparent"
+    android:paddingTop="@dimen/margin_small"
+    android:paddingBottom="@dimen/margin_small"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_small"
+    android:textAllCaps="false"
+    android:paddingVertical="@dimen/margin_small"
+    style="@style/TextView.Body2"/>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/logger_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/spay_logger_min_height"
+    android:transitionName="payTransition">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logger_back_btn"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spay_logger_height_56"
+        android:layout_margin="@dimen/spay_logger_margin_16"
+        android:layout_marginTop="@dimen/spay_logger_margin_24"
+        android:layout_marginBottom="@dimen/spay_logger_margin_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/SpayPayButton">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/spay_logger_width_300"
+            android:minHeight="@dimen/spay_logger_margin_24"
+            android:text="Назад"
+            style="@style/SpayCardButton.SemiboldTextStyle"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/loggerScrollContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/spay_logger_margin_16"
+        android:layout_marginBottom="@dimen/spay_logger_bottom_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/loggerTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

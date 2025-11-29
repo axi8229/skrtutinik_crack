@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/spay_silsc_cl_selected_card"
+    android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <spay.sdk.view.CardLogoCompositeView
+        android:id="@+id/spay_silsc_card_logo_cv"
+        android:layout_width="@dimen/spay_card_icon_size"
+        android:layout_height="@dimen/spay_card_icon_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/spay_silsc_tv_card_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spay_large_margin"
+        android:layout_marginEnd="@dimen/spay_large_margin"
+        app:layout_constraintBottom_toTopOf="@+id/spay_silsc_tv_card_description"
+        app:layout_constraintEnd_toStartOf="@+id/spay_silsc_iv_more_cards"
+        app:layout_constraintStart_toEndOf="@+id/spay_silsc_card_logo_cv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        style="@style/SpayCardSelectHeaderStyle"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:ellipsize="end"
+        android:id="@+id/spay_silsc_tv_card_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_marginEnd="@dimen/spay_large_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/spay_silsc_iv_more_cards"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/spay_silsc_tv_card_title"
+        app:layout_constraintTop_toBottomOf="@+id/spay_silsc_tv_card_title"
+        style="@style/Spay.Card.Content"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/spay_silsc_iv_more_cards"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/spay_ic_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

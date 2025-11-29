@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="36dp"
+    android:width="36dp"
+    android:viewportWidth="36"
+    android:viewportHeight="36">
+    <path
+        android:fillColor="@drawable/_spay_ic_card_preview__0_res_0x7f08006d"
+        android:pathData="M6.5,8L29.5,8A2.5,2.5 0,0 1,32 10.5L32,25.5A2.5,2.5 0,0 1,29.5 28L6.5,28A2.5,2.5 0,0 1,4 25.5L4,10.5A2.5,2.5 0,0 1,6.5 8z"/>
+    <group>
+        <clip-path android:pathData="M6.5,8L29.5,8A2.5,2.5 0,0 1,32 10.5L32,25.5A2.5,2.5 0,0 1,29.5 28L6.5,28A2.5,2.5 0,0 1,4 25.5L4,10.5A2.5,2.5 0,0 1,6.5 8z"/>
+        <path
+            android:fillColor="@drawable/_spay_ic_card_preview__1_res_0x7f08006e"
+            android:pathData="M4,8H28L4,28V8Z"
+            android:fillType="evenOdd"/>
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M9.5,13.5m-2.5,0a2.5,2.5 0,1 1,5 0a2.5,2.5 0,1 1,-5 0"
+            android:fillAlpha="0.5"/>
+    </group>
+</vector>

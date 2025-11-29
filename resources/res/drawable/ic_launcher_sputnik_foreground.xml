@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="108dp"
+    android:width="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:scaleX="0.6935"
+        android:scaleY="0.6935"
+        android:translateX="21.06"
+        android:translateY="21.06">
+        <path
+            android:fillColor="@drawable/_ic_launcher_sputnik_foreground__0_res_0x7f080030"
+            android:pathData="M61.9259,56.8999L45.2381,95.0004C34.0794,94.4977 23.1217,89.9739 14.4762,81.63L42.4233,56.1962L38.3016,52.0745L13.3704,80.5242C4.8254,71.6776 0.4021,60.4184 0,49.0586L35.6878,33.376L45.5397,22.8205L39.4074,35.085L35.9894,36.4924C35.9894,48.4554 45.6402,58.1062 57.6032,58.1062L59.5132,54.4872L71.4762,48.2544L61.9259,56.8999ZM81.127,13.8734C62.5291,-4.7245 32.4709,-4.7245 13.9735,13.8734C4.9259,22.921 0.3016,34.5824 0.1005,46.4448L38.6032,26.138C42.3228,19.503 49.3598,14.9792 57.5026,14.9792C69.4656,14.9792 79.1164,24.63 79.1164,36.593C79.1164,44.4342 74.8942,51.2702 68.6614,55.0903L47.5503,95.1009C59.7143,95.1009 71.7778,90.4766 81.0265,81.2279C99.6243,62.5295 99.6243,32.4713 81.127,13.8734Z"/>
+    </group>
+</vector>

@@ -1,0 +1,31 @@
+package com.huawei.riemann.location.bean.log;
+
+/* loaded from: classes3.dex */
+public class BdsNavItem {
+    public int acc;
+    public double af0;
+    public double af1;
+    public double af2;
+    public int aodc;
+    public int aode;
+    public double cic;
+    public double cis;
+    public double crc;
+    public double crs;
+    public double cuc;
+    public double cus;
+    public double deltaN;
+    public double ecc;
+    public double groupDelay;
+    public int health;
+    public double i0;
+    public int inclinationDot;
+    public double m0;
+    public double omega;
+    public double omega0;
+    public double omegaDot;
+    public double sqrtA;
+    public int svid;
+    public int toc;
+    public int toe;
+}

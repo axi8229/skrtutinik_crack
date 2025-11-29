@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/spay_silcw_cl_compound_wallet"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <spay.sdk.view.CardLogoCompositeView
+        android:id="@+id/spay_silcw_wallet_logo_cv"
+        android:layout_width="@dimen/spay_card_icon_size"
+        android:layout_height="@dimen/spay_card_icon_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:gravity="start"
+        android:id="@+id/spay_silcw_tv_wallet_amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spay_cv_bnt_text_bottom_margin"
+        android:layout_marginStart="@dimen/spay_large_margin"
+        app:layout_constraintBottom_toTopOf="@+id/spay_silcw_tv_wallet_card_info"
+        app:layout_constraintStart_toEndOf="@+id/spay_silcw_wallet_logo_cv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        style="@style/SpayCard.TitleTextStyle.CardAmount"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:ellipsize="end"
+        android:gravity="start"
+        android:id="@+id/spay_silcw_tv_wallet_card_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_marginEnd="@dimen/spay_large_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/spay_silcw_compound_wallet_iv_more_cards"
+        app:layout_constraintStart_toStartOf="@+id/spay_silcw_tv_wallet_amount"
+        app:layout_constraintTop_toBottomOf="@+id/spay_silcw_tv_wallet_amount"
+        style="@style/Spay.Card.Content"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/spay_silcw_compound_wallet_iv_more_cards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/spay_ic_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

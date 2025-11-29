@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/spay_sricsh_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:gravity="top|center_horizontal"
+        android:id="@+id/spay_sricsh_actv_header_not_enough_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spay_8dp"
+        android:text="@string/spay_card_selection_header_not_enough_money"
+        style="@style/Spay.CardSelection.NotEnoughMoney.Title"/>
+    <TextView
+        android:gravity="top|center_horizontal"
+        android:id="@+id/spay_sricsh_actv_header_not_enough_money_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spay_16dp"
+        android:text="@string/spay_card_selection_description_not_enough_money"
+        style="@style/Spay.CardSelection.NotEnoughMoney.Description"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

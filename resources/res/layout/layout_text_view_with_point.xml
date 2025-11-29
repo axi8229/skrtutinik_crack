@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textColor="@color/track_gray"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_number"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_default"
+        android:paddingStart="0dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:paddingVertical="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_special_icon"
+        app:layout_constraintStart_toEndOf="@+id/iv_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TextView.Body2"/>
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:padding="2dp"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:src="@drawable/ic_circle_gray"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="@dimen/margin_default"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_number"
+        app:layout_constraintStart_toStartOf="@+id/tv_notice"
+        app:layout_constraintTop_toTopOf="@+id/tv_number"/>
+    <ImageView
+        android:id="@+id/iv_special_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_start_end"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_number"/>
+</merge>

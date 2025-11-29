@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/sputnik_gray_darkest"/>
+            <corners android:radius="6dp"/>
+        </shape>
+    </item>
+    <item>
+        <inset
+            android:drawable="@drawable/ic_error_load_preview"
+            android:inset="30dp"/>
+    </item>
+</layer-list>

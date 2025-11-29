@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_notifications"
+    app:startDestination="@+id/notificationsFragment">
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.main.profile.notifications.NotificationsFragment"
+        android:id="@+id/notificationsFragment">
+        <action
+            android:id="@+id/action_notificationsFragment_to_notificationDetailsFragment"
+            app:destination="@+id/notificationDetailsFragment"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim"/>
+    </fragment>
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.main.profile.notifications.NotificationsDetailsFragment"
+        android:id="@+id/notificationDetailsFragment"/>
+</navigation>

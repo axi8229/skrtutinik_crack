@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d new notification</item>
+        <item quantity="other">%d new notifications</item>
+    </plurals>
+    <plurals name="seconds">
+        <item quantity="zero">секунд</item>
+        <item quantity="one">секунду</item>
+        <item quantity="two">секунды</item>
+        <item quantity="few">секунды</item>
+        <item quantity="many">секунд</item>
+        <item quantity="other">секунд</item>
+    </plurals>
+    <plurals name="spay_order_compound_wallet_f">
+        <item quantity="one">и ещё %1$d</item>
+        <item quantity="few">и ещё %1$d</item>
+        <item quantity="other">и ещё %1$d</item>
+    </plurals>
+    <plurals name="spay_order_compound_wallet_old_f">
+        <item quantity="one">%1$d счетом</item>
+        <item quantity="few">%1$d счетами</item>
+        <item quantity="other">%1$d счетами</item>
+    </plurals>
+    <plurals name="spay_otp_secs_f">
+        <item quantity="one">%1$d секунду</item>
+        <item quantity="few">%1$d секунды</item>
+        <item quantity="other">%1$d секунд</item>
+    </plurals>
+    <plurals name="time_minute">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="time_second">
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
+</resources>

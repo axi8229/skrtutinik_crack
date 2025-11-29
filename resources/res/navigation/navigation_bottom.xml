@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_navigation"
+    app:startDestination="@+id/navigation_camera">
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.main.cameras.GlobalCamerasFragment"
+        android:id="@+id/navigation_camera"/>
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.main.profile.ProfileFragment"
+        android:id="@+id/navigation_profile">
+        <deepLink app:uri="@string/deeplink_profile"/>
+    </fragment>
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.main.market.NewMarketFragment"
+        android:id="@+id/navigation_market">
+        <deepLink app:uri="@string/deeplink_market"/>
+    </fragment>
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.main.help.HelpFragment"
+        android:id="@+id/navigation_help"/>
+</navigation>

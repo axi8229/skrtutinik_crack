@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/localization_navigation"
+    app:startDestination="@+id/localizationList">
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.main.profile.localization.LocalizationListFragment"
+        android:id="@+id/localizationList">
+        <action
+            android:id="@+id/action_localizationList_to_localization_bottom_sheet"
+            app:destination="@+id/localization_bottom_sheet"/>
+    </fragment>
+    <dialog
+        android:name="sputnik.axmor.com.sputnik.ui.main.profile.localization.LocalizationBottomSheet"
+        android:id="@+id/localization_bottom_sheet">
+        <action
+            android:id="@+id/action_localization_bottom_sheet_to_localizationSplash"
+            app:destination="@+id/localizationSplash"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim"/>
+    </dialog>
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.main.profile.localization.LocalizationSplash"
+        android:id="@+id/localizationSplash">
+        <action
+            android:id="@+id/action_localizationSplash_to_localizationList"
+            app:destination="@+id/localizationList"
+            app:popUpTo="@+id/localizationList"
+            app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>

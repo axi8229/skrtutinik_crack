@@ -1,0 +1,226 @@
+package com.google.android.gms.measurement.internal;
+
+import android.app.Activity;
+import android.app.Application;
+import android.net.Uri;
+import android.os.Bundle;
+import android.text.TextUtils;
+import com.google.android.gms.internal.measurement.zzov;
+import com.huawei.hms.support.api.entity.core.CommonCode;
+
+/* compiled from: com.google.android.gms:play-services-measurement-impl@@22.1.2 */
+/* loaded from: classes2.dex */
+final class zzkz implements Application.ActivityLifecycleCallbacks {
+    private final /* synthetic */ zzjq zza;
+
+    @Override // android.app.Application.ActivityLifecycleCallbacks
+    public final void onActivityStarted(Activity activity) {
+    }
+
+    @Override // android.app.Application.ActivityLifecycleCallbacks
+    public final void onActivityStopped(Activity activity) {
+    }
+
+    static /* synthetic */ void zza(zzkz zzkzVar, boolean z, Uri uri, String str, String str2) throws IllegalStateException {
+        Bundle bundleZza;
+        Uri uri2;
+        boolean z2;
+        zzkzVar.zza.zzt();
+        try {
+            zzos zzosVarZzq = zzkzVar.zza.zzq();
+            boolean z3 = zzov.zza() && zzkzVar.zza.zze().zza(zzbh.zzct);
+            if (TextUtils.isEmpty(str2)) {
+                bundleZza = null;
+            } else if (str2.contains("gclid") || ((z3 && str2.contains("gbraid")) || str2.contains("utm_campaign") || str2.contains("utm_source") || str2.contains("utm_medium") || str2.contains("utm_id") || str2.contains("dclid") || str2.contains("srsltid") || str2.contains("sfmc_id"))) {
+                bundleZza = zzosVarZzq.zza(Uri.parse("https://google.com/search?" + str2), z3);
+                if (bundleZza != null) {
+                    bundleZza.putString("_cis", "referrer");
+                }
+            } else {
+                zzosVarZzq.zzj().zzc().zza("Activity created with data 'referrer' without required params");
+                bundleZza = null;
+            }
+            if (z) {
+                zzos zzosVarZzq2 = zzkzVar.zza.zzq();
+                if (zzov.zza() && zzkzVar.zza.zze().zza(zzbh.zzct)) {
+                    uri2 = uri;
+                    z2 = true;
+                } else {
+                    uri2 = uri;
+                    z2 = false;
+                }
+                Bundle bundleZza2 = zzosVarZzq2.zza(uri2, z2);
+                if (bundleZza2 != null) {
+                    bundleZza2.putString("_cis", CommonCode.Resolution.HAS_RESOLUTION_FROM_APK);
+                    if (!bundleZza2.containsKey("gclid") && bundleZza != null && bundleZza.containsKey("gclid")) {
+                        bundleZza2.putString("_cer", String.format("gclid=%s", bundleZza.getString("gclid")));
+                    }
+                    zzkzVar.zza.zzc(str, "_cmp", bundleZza2);
+                    zzkzVar.zza.zza.zza(str, bundleZza2);
+                }
+            }
+            if (TextUtils.isEmpty(str2)) {
+                return;
+            }
+            zzkzVar.zza.zzj().zzc().zza("Activity created with referrer", str2);
+            if (zzkzVar.zza.zze().zza(zzbh.zzbq)) {
+                if (bundleZza != null) {
+                    zzkzVar.zza.zzc(str, "_cmp", bundleZza);
+                    zzkzVar.zza.zza.zza(str, bundleZza);
+                } else {
+                    zzkzVar.zza.zzj().zzc().zza("Referrer does not contain valid parameters", str2);
+                }
+                zzkzVar.zza.zza("auto", "_ldl", (Object) null, true);
+                return;
+            }
+            if (!str2.contains("gclid") || (!str2.contains("utm_campaign") && !str2.contains("utm_source") && !str2.contains("utm_medium") && !str2.contains("utm_term") && !str2.contains("utm_content"))) {
+                zzkzVar.zza.zzj().zzc().zza("Activity created with data 'referrer' without required params");
+            } else {
+                if (TextUtils.isEmpty(str2)) {
+                    return;
+                }
+                zzkzVar.zza.zza("auto", "_ldl", (Object) str2, true);
+            }
+        } catch (RuntimeException e) {
+            zzkzVar.zza.zzj().zzg().zza("Throwable caught in handleReferrerForOnActivityCreated", e);
+        }
+    }
+
+    zzkz(zzjq zzjqVar) {
+        this.zza = zzjqVar;
+    }
+
+    /* JADX WARN: Removed duplicated region for block: B:20:0x004a  */
+    @Override // android.app.Application.ActivityLifecycleCallbacks
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct code enable 'Show inconsistent code' option in preferences
+    */
+    public final void onActivityCreated(android.app.Activity r9, android.os.Bundle r10) {
+        /*
+            r8 = this;
+            com.google.android.gms.measurement.internal.zzjq r0 = r8.zza     // Catch: java.lang.Throwable -> L2d java.lang.RuntimeException -> L30
+            com.google.android.gms.measurement.internal.zzgo r0 = r0.zzj()     // Catch: java.lang.Throwable -> L2d java.lang.RuntimeException -> L30
+            com.google.android.gms.measurement.internal.zzgq r0 = r0.zzp()     // Catch: java.lang.Throwable -> L2d java.lang.RuntimeException -> L30
+            java.lang.String r1 = "onActivityCreated"
+            r0.zza(r1)     // Catch: java.lang.Throwable -> L2d java.lang.RuntimeException -> L30
+            android.content.Intent r0 = r9.getIntent()     // Catch: java.lang.Throwable -> L2d java.lang.RuntimeException -> L30
+            if (r0 != 0) goto L1f
+            com.google.android.gms.measurement.internal.zzjq r0 = r8.zza
+            com.google.android.gms.measurement.internal.zzlj r0 = r0.zzn()
+            r0.zza(r9, r10)
+            return
+        L1f:
+            android.net.Uri r1 = r0.getData()     // Catch: java.lang.Throwable -> L2d java.lang.RuntimeException -> L30
+            if (r1 == 0) goto L33
+            boolean r2 = r1.isHierarchical()     // Catch: java.lang.Throwable -> L2d java.lang.RuntimeException -> L30
+            if (r2 == 0) goto L33
+        L2b:
+            r5 = r1
+            goto L4c
+        L2d:
+            r0 = move-exception
+            goto Lb1
+        L30:
+            r0 = move-exception
+            goto L98
+        L33:
+            android.os.Bundle r1 = r0.getExtras()     // Catch: java.lang.Throwable -> L2d java.lang.RuntimeException -> L30
+            if (r1 == 0) goto L4a
+            java.lang.String r2 = "com.android.vending.referral_url"
+            java.lang.String r1 = r1.getString(r2)     // Catch: java.lang.Throwable -> L2d java.lang.RuntimeException -> L30
+            boolean r2 = android.text.TextUtils.isEmpty(r1)     // Catch: java.lang.Throwable -> L2d java.lang.RuntimeException -> L30
+            if (r2 != 0) goto L4a
+            android.net.Uri r1 = android.net.Uri.parse(r1)     // Catch: java.lang.Throwable -> L2d java.lang.RuntimeException -> L30
+            goto L2b
+        L4a:
+            r1 = 0
+            goto L2b
+        L4c:
+            if (r5 == 0) goto L8e
+            boolean r1 = r5.isHierarchical()     // Catch: java.lang.Throwable -> L2d java.lang.RuntimeException -> L30
+            if (r1 != 0) goto L55
+            goto L8e
+        L55:
+            com.google.android.gms.measurement.internal.zzjq r1 = r8.zza     // Catch: java.lang.Throwable -> L2d java.lang.RuntimeException -> L30
+            r1.zzq()     // Catch: java.lang.Throwable -> L2d java.lang.RuntimeException -> L30
+            boolean r0 = com.google.android.gms.measurement.internal.zzos.zza(r0)     // Catch: java.lang.Throwable -> L2d java.lang.RuntimeException -> L30
+            if (r0 == 0) goto L64
+            java.lang.String r0 = "gs"
+        L62:
+            r6 = r0
+            goto L67
+        L64:
+            java.lang.String r0 = "auto"
+            goto L62
+        L67:
+            java.lang.String r0 = "referrer"
+            java.lang.String r7 = r5.getQueryParameter(r0)     // Catch: java.lang.Throwable -> L2d java.lang.RuntimeException -> L30
+            if (r10 != 0) goto L72
+            r0 = 1
+        L70:
+            r4 = r0
+            goto L74
+        L72:
+            r0 = 0
+            goto L70
+        L74:
+            com.google.android.gms.measurement.internal.zzjq r0 = r8.zza     // Catch: java.lang.Throwable -> L2d java.lang.RuntimeException -> L30
+            com.google.android.gms.measurement.internal.zzhv r0 = r0.zzl()     // Catch: java.lang.Throwable -> L2d java.lang.RuntimeException -> L30
+            com.google.android.gms.measurement.internal.zzlc r1 = new com.google.android.gms.measurement.internal.zzlc     // Catch: java.lang.Throwable -> L2d java.lang.RuntimeException -> L30
+            r2 = r1
+            r3 = r8
+            r2.<init>(r3, r4, r5, r6, r7)     // Catch: java.lang.Throwable -> L2d java.lang.RuntimeException -> L30
+            r0.zzb(r1)     // Catch: java.lang.Throwable -> L2d java.lang.RuntimeException -> L30
+            com.google.android.gms.measurement.internal.zzjq r0 = r8.zza
+            com.google.android.gms.measurement.internal.zzlj r0 = r0.zzn()
+            r0.zza(r9, r10)
+            return
+        L8e:
+            com.google.android.gms.measurement.internal.zzjq r0 = r8.zza
+            com.google.android.gms.measurement.internal.zzlj r0 = r0.zzn()
+            r0.zza(r9, r10)
+            return
+        L98:
+            com.google.android.gms.measurement.internal.zzjq r1 = r8.zza     // Catch: java.lang.Throwable -> L2d
+            com.google.android.gms.measurement.internal.zzgo r1 = r1.zzj()     // Catch: java.lang.Throwable -> L2d
+            com.google.android.gms.measurement.internal.zzgq r1 = r1.zzg()     // Catch: java.lang.Throwable -> L2d
+            java.lang.String r2 = "Throwable caught in onActivityCreated"
+            r1.zza(r2, r0)     // Catch: java.lang.Throwable -> L2d
+            com.google.android.gms.measurement.internal.zzjq r0 = r8.zza
+            com.google.android.gms.measurement.internal.zzlj r0 = r0.zzn()
+            r0.zza(r9, r10)
+            return
+        Lb1:
+            com.google.android.gms.measurement.internal.zzjq r1 = r8.zza
+            com.google.android.gms.measurement.internal.zzlj r1 = r1.zzn()
+            r1.zza(r9, r10)
+            throw r0
+        */
+        throw new UnsupportedOperationException("Method not decompiled: com.google.android.gms.measurement.internal.zzkz.onActivityCreated(android.app.Activity, android.os.Bundle):void");
+    }
+
+    @Override // android.app.Application.ActivityLifecycleCallbacks
+    public final void onActivityDestroyed(Activity activity) {
+        this.zza.zzn().zza(activity);
+    }
+
+    @Override // android.app.Application.ActivityLifecycleCallbacks
+    public final void onActivityPaused(Activity activity) throws IllegalStateException {
+        this.zza.zzn().zzb(activity);
+        zznb zznbVarZzp = this.zza.zzp();
+        zznbVarZzp.zzl().zzb(new zznd(zznbVarZzp, zznbVarZzp.zzb().elapsedRealtime()));
+    }
+
+    @Override // android.app.Application.ActivityLifecycleCallbacks
+    public final void onActivityResumed(Activity activity) throws IllegalStateException {
+        zznb zznbVarZzp = this.zza.zzp();
+        zznbVarZzp.zzl().zzb(new zzne(zznbVarZzp, zznbVarZzp.zzb().elapsedRealtime()));
+        this.zza.zzn().zzc(activity);
+    }
+
+    @Override // android.app.Application.ActivityLifecycleCallbacks
+    public final void onActivitySaveInstanceState(Activity activity, Bundle bundle) {
+        this.zza.zzn().zzb(activity, bundle);
+    }
+}

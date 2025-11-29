@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="@color/track_gray">
+    <item android:id="@android:id/mask">
+        <shape android:shape="oval">
+            <solid android:color="@color/colorPrimaryDark"/>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/ic_baseline_add_circle_24"/>
+</ripple>

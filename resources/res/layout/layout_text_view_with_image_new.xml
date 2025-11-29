@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingTop="@dimen/margin_small_plus"
+        android:paddingBottom="@dimen/margin_small_plus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/margin_small_plus">
+        <TextView
+            android:textSize="@dimen/text_small"
+            android:textColor="@color/track_gray"
+            android:gravity="start"
+            android:id="@+id/tv_number"
+            android:padding="0dp"
+            android:paddingLeft="@dimen/margin_start_end"
+            android:paddingTop="0dp"
+            android:paddingRight="@dimen/margin_start_end"
+            android:paddingBottom="0dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewStart"
+            android:paddingStart="0dp"
+            android:layout_marginStart="@dimen/margin_small"
+            android:paddingHorizontal="@dimen/margin_start_end"
+            android:paddingVertical="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/TextView.Body1"/>
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="@dimen/margin_default"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_number"
+            app:layout_constraintStart_toStartOf="@+id/tv_notice"
+            app:layout_constraintTop_toTopOf="@+id/tv_number"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

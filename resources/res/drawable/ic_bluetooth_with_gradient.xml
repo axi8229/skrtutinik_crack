@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="20dp"
+    android:width="13dp"
+    android:viewportWidth="13"
+    android:viewportHeight="20">
+    <path
+        android:fillColor="@drawable/_ic_bluetooth_with_gradient__0_res_0x7f08001d"
+        android:pathData="M12.154,14.062L7.271,10.156L12.154,6.249C12.615,5.88 12.615,5.2 12.154,4.831L6.385,0.216C5.759,-0.285 4.808,0.142 4.808,0.925V7.927L1.642,4.887C1.266,4.527 0.657,4.527 0.282,4.887C-0.094,5.248 -0.094,5.832 0.282,6.193L4.409,10.156L0.282,14.118C-0.094,14.479 -0.094,15.063 0.282,15.424C0.657,15.784 1.266,15.784 1.642,15.424L4.808,12.384V19.386C4.808,20.169 5.759,20.596 6.385,20.095L12.154,15.48C12.615,15.111 12.615,14.431 12.154,14.062ZM6.731,2.896L10.036,5.54L6.731,8.185V2.896ZM6.731,17.415V12.126L10.036,14.771L6.731,17.415Z"/>
+</vector>

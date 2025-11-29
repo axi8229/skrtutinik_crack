@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="92dp"
+    android:width="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="92">
+    <path
+        android:fillColor="#606060"
+        android:pathData="M87,1H9C6.2,1 4,3.2 4,6V80C4,82.3 5.5,84.2 7.7,84.8C8.1,86.2 9.3,87.4 10.7,87.8C11.2,89.7 12.9,91 14.9,91H81.1C83.1,91 84.8,89.7 85.3,87.8C86.7,87.4 87.9,86.2 88.3,84.8C90.4,84.2 92,82.3 92,80V6C92,3.2 89.8,1 87,1Z"/>
+    <path
+        android:fillColor="#e5e5e5"
+        android:pathData="M81.1,89H14.9C13.7,89 12.7,88.1 12.5,87H83.4C83.3,88.1 82.3,89 81.1,89Z"/>
+    <path
+        android:fillColor="#ececec"
+        android:pathData="M84.1,86H11.9C10.7,86 9.7,85.1 9.5,84H86.4C86.3,85.1 85.3,86 84.1,86Z"/>
+    <path
+        android:fillColor="#ffffff"
+        android:pathData="M90,80C90,81.7 88.7,83 87,83H9C7.3,83 6,81.7 6,80V6C6,4.3 7.3,3 9,3H87C88.7,3 90,4.3 90,6V80Z"/>
+    <path
+        android:fillColor="#606060"
+        android:pathData="M83,7H13C11.3,7 10,8.3 10,10V63C10,64.6 11.3,66 13,66H41H56H83C84.6,66 86,64.7 86,63V10C86,8.3 84.7,7 83,7Z"/>
+    <path
+        android:fillColor="#606060"
+        android:pathData="M59,76H38V77H59V76Z"/>
+    <path
+        android:fillColor="#606060"
+        android:pathData="M59,73H38V74H59V73Z"/>
+    <path
+        android:fillColor="#e8e8e8"
+        android:pathData="M85,63C85,64.1 84.1,65 83,65H71.5C69.2,54 59.6,46 48.5,46C37.4,46 27.8,54 25.5,65H13C11.9,65 11,64.1 11,63V10C11,8.9 11.9,8 13,8H83C84.1,8 85,8.9 85,10V63Z"/>
+    <path
+        android:fillColor="#fafafa"
+        android:pathData="M26.5,65C28.8,54.5 37.9,47 48.5,47C59,47 68.2,54.5 70.4,65H26.5Z"/>
+    <path
+        android:fillColor="#606060"
+        android:pathData="M48.5,17C41.1,17 35,23.1 35,30.5C35,37.9 41.1,44 48.5,44C55.9,44 62,37.9 62,30.5C62,23.1 55.9,17 48.5,17Z"/>
+    <path
+        android:fillColor="#fafafa"
+        android:pathData="M48.5,43C41.6,43 36,37.4 36,30.5C36,23.6 41.6,18 48.5,18C55.4,18 61,23.6 61,30.5C61,37.4 55.4,43 48.5,43Z"/>
+</vector>

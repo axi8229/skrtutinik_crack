@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/family_navigation"
+    app:startDestination="@+id/familyFragment">
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.main.profile.family.FamilyListFragment"
+        android:id="@+id/familyFragment">
+        <deepLink app:uri="@string/deeplink_family"/>
+        <action
+            android:id="@+id/action_familyFragment_to_familyInfoFragment"
+            app:destination="@+id/familyInfoFragment"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim"/>
+        <action
+            android:id="@+id/action_familyFragment_to_resendFamilyInviteDialog"
+            app:destination="@+id/resendFamilyInviteDialog"/>
+        <action
+            android:id="@+id/action_familyFragment_to_bottomSheetInviteToFamily"
+            app:destination="@+id/bottomSheetInviteToFamily"/>
+        <action
+            android:id="@+id/action_familyFragment_to_leaveFromFamilyDialog"
+            app:destination="@+id/leaveFromFamilyDialog"/>
+    </fragment>
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.main.profile.family.FamilyInfoFragment"
+        android:id="@+id/familyInfoFragment">
+        <action
+            android:id="@+id/action_familyInfoFragment_to_removeFromFamilyDialog"
+            app:destination="@+id/removeFromFamilyDialog"/>
+    </fragment>
+    <dialog
+        android:label="ResendFamilyInviteDialog"
+        android:name="sputnik.axmor.com.sputnik.ui.main.profile.family.ResendFamilyInviteDialog"
+        android:id="@+id/resendFamilyInviteDialog"/>
+    <dialog
+        android:label="BottomSheetInviteToFamily"
+        android:name="sputnik.axmor.com.sputnik.ui.main.profile.family.BottomSheetInviteToFamily"
+        android:id="@+id/bottomSheetInviteToFamily">
+        <action
+            android:id="@+id/action_bottomSheetInviteToFamily_to_sendFamilyInviteErrorDialog"
+            app:destination="@+id/sendFamilyInviteErrorDialog"/>
+    </dialog>
+    <dialog
+        android:name="sputnik.axmor.com.sputnik.ui.main.profile.family.SendFamilyInviteErrorDialog"
+        android:id="@+id/sendFamilyInviteErrorDialog"/>
+    <dialog
+        android:label="RemoveFromFamilyDialog"
+        android:name="sputnik.axmor.com.sputnik.ui.main.profile.family.RemoveFromFamilyDialog"
+        android:id="@+id/removeFromFamilyDialog"/>
+    <dialog
+        android:label="LeaveFromFamilyDialog"
+        android:name="sputnik.axmor.com.sputnik.ui.main.profile.family.LeaveFromFamilyDialog"
+        android:id="@+id/leaveFromFamilyDialog"/>
+</navigation>

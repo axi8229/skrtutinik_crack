@@ -1,0 +1,10 @@
+package androidx.core.os;
+
+import androidx.core.util.ObjectsCompat;
+
+/* loaded from: classes.dex */
+public class OperationCanceledException extends RuntimeException {
+    public OperationCanceledException(String str) {
+        super(ObjectsCompat.toString(str, "The operation has been canceled."));
+    }
+}

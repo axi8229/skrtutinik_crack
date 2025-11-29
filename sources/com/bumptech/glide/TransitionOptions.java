@@ -1,0 +1,33 @@
+package com.bumptech.glide;
+
+import com.bumptech.glide.TransitionOptions;
+import com.bumptech.glide.request.transition.NoTransition;
+import com.bumptech.glide.request.transition.TransitionFactory;
+import com.bumptech.glide.util.Preconditions;
+
+/* loaded from: classes.dex */
+public abstract class TransitionOptions<CHILD extends TransitionOptions<CHILD, TranscodeType>, TranscodeType> implements Cloneable {
+    private TransitionFactory<? super TranscodeType> transitionFactory = NoTransition.getFactory();
+
+    private CHILD self() {
+        return this;
+    }
+
+    public final CHILD transition(TransitionFactory<? super TranscodeType> transitionFactory) {
+        this.transitionFactory = (TransitionFactory) Preconditions.checkNotNull(transitionFactory);
+        return (CHILD) self();
+    }
+
+    /* renamed from: clone, reason: merged with bridge method [inline-methods] */
+    public final CHILD m2308clone() {
+        try {
+            return (CHILD) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    final TransitionFactory<? super TranscodeType> getTransitionFactory() {
+        return this.transitionFactory;
+    }
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="@raw/certificate_ca"/>
+            <certificates src="system"/>
+        </trust-anchors>
+    </base-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">sputnik.systems
+        </domain>
+        <domain>api-mobile-gorod.sputnik.systems
+        </domain>
+        <domain>citizen-app.stage.sputnik.systems
+        </domain>
+        <domain>streams.sputnik.systems
+        </domain>
+        <trust-anchors>
+            <certificates src="@raw/certificate_ca"/>
+            <certificates src="system"/>
+        </trust-anchors>
+    </domain-config>
+</network-security-config>

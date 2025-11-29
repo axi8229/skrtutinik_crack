@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/slnc_root"
+    android:paddingLeft="@dimen/spay_16dp"
+    android:paddingRight="@dimen/spay_16dp"
+    android:paddingBottom="@dimen/spay_16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/spay_552dp"
+    android:paddingHorizontal="@dimen/spay_16dp">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/spay_lnc_actv_header"
+        android:layout_marginTop="@dimen/spay_148dp"
+        android:text="@string/spay_can_not_pay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/SpayErrorScreenHeaderTextStyle"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/spay_lnc_actv_content"
+        android:layout_marginTop="@dimen/spay_8dp"
+        android:text="@string/spay_top_card_and_try_again"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spay_lnc_actv_header"
+        style="@style/SpayErrorScreenContentTextStyle"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/spay_lnc_aciv_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/spay_ic_failure_test"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spay_lnc_actv_content"/>
+    <com.google.android.material.button.MaterialButton
+        android:textSize="@dimen/spay_16sp"
+        android:id="@+id/spay_lnc_mb_cancel"
+        android:layout_width="0dp"
+        android:minHeight="@dimen/spay_64dp"
+        android:text="@string/spay_cancel_text"
+        android:fontFamily="@font/spay_sans_text_semibold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/SpayTransparentButton"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

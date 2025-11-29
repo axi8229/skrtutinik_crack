@@ -1,0 +1,8 @@
+package org.bouncycastle.asn1;
+
+/* loaded from: classes4.dex */
+public class DERT61String extends ASN1T61String {
+    DERT61String(byte[] bArr, boolean z) {
+        super(bArr, z);
+    }
+}

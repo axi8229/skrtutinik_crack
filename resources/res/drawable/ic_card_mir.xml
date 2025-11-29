@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="14dp"
+    android:width="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="14">
+    <path
+        android:fillColor="#4db45e"
+        android:pathData="M6.467,3C5.9114,3.0097 5.4286,3.3843 5.281,3.92C5.053,4.764 4.409,7.093 4.391,7.157H4.213C4.213,7.157 3.554,4.776 3.323,3.917C3.1736,3.3825 2.6909,3.0096 2.136,3H0V10H2.136V5.843H2.314L3.56,10H5.043L6.289,5.846H6.467V10H8.6V3H6.467Z"
+        android:fillType="evenOdd"/>
+    <path
+        android:fillColor="#4db45e"
+        android:pathData="M14.27,3C13.8562,3.0672 13.5074,3.3454 13.35,3.734L11.837,7.158H11.659V3H9.523V10H11.54C11.9622,9.9365 12.3214,9.6587 12.489,9.266L13.972,5.842H14.15V10H16.286V3H14.27Z"
+        android:fillType="evenOdd"/>
+    <path
+        android:fillColor="#4db45e"
+        android:pathData="M17.236,6.179V10H19.372V7.769H21.686C22.6781,7.7604 23.5547,7.121 23.866,6.179H17.236Z"
+        android:fillType="evenOdd"/>
+    <path
+        android:fillColor="@drawable/_ic_card_mir__0_res_0x7f080024"
+        android:pathData="M21.687,3H16.937C17.1629,4.3129 18.1191,5.3814 19.399,5.751C19.6897,5.8321 19.9902,5.8731 20.292,5.873H23.953C23.9852,5.712 24.001,5.5482 24,5.384C24.0195,4.087 22.984,3.0197 21.687,3Z"
+        android:fillType="evenOdd"/>
+</vector>

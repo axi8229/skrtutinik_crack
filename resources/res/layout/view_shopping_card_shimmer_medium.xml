@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yoomoney.sdk.gui.widget.ShimmerLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:ym_shimmer_auto_start="true">
+    <FrameLayout
+        android:layout_gravity="top"
+        android:id="@+id/bookmarkLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ym_spaceM"
+        android:layout_marginStart="@dimen/ym_spaceM">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/bg_shopping_card_shimmer_medium_bookmark"/>
+    </FrameLayout>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/ym_spaceM"
+        android:layout_marginRight="@dimen/ym_spaceM"
+        android:layout_marginBottom="@dimen/ym_spaceL"
+        android:layout_marginHorizontal="@dimen/ym_spaceM"
+        app:srcCompat="@drawable/bg_shopping_card_shimmer_medium_text"/>
+</ru.yoomoney.sdk.gui.widget.ShimmerLayout>

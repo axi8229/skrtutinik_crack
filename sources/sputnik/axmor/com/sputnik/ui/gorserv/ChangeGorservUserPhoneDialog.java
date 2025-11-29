@@ -1,0 +1,238 @@
+package sputnik.axmor.com.sputnik.ui.gorserv;
+
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.Context;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
+import android.view.View;
+import android.view.Window;
+import android.widget.EditText;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentViewModelLazyKt;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelStore;
+import androidx.lifecycle.viewmodel.CreationExtras;
+import androidx.viewbinding.ViewBinding;
+import com.redmadrobot.inputmask.MaskedTextChangedListener;
+import com.redmadrobot.inputmask.helper.AffinityCalculationStrategy;
+import com.sputnik.common.analytics.Analytics;
+import com.sputnik.common.entities.localization.LocalizationLocalModel;
+import com.sputnik.common.localization.LocalizationStorage;
+import com.sputnik.common.utils.WindowUtilsKt;
+import com.sputnik.common.viewmodels.GorservViewModel;
+import com.sputnik.common.viewmodels.MultiViewModelFactory;
+import io.michaelrocks.libphonenumber.android.PhoneNumberUtil;
+import kotlin.Lazy;
+import kotlin.LazyKt;
+import kotlin.Metadata;
+import kotlin.collections.CollectionsKt;
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.internal.Intrinsics;
+import kotlin.jvm.internal.Reflection;
+import me.ibrahimsn.lib.PhoneNumberKit;
+import sputnik.axmor.com.databinding.DialogChangeGorservUserPhoneBinding;
+import sputnik.axmor.com.sputnik.extensions.ContextKt;
+
+/* compiled from: ChangeGorservUserPhoneDialog.kt */
+@Metadata(d1 = {"\u0000z\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u000f\u0010\u0005\u001a\u00020\u0004H\u0002¢\u0006\u0004\b\u0005\u0010\u0003J\u000f\u0010\u0006\u001a\u00020\u0004H\u0002¢\u0006\u0004\b\u0006\u0010\u0003J\u0017\u0010\t\u001a\u00020\u00042\u0006\u0010\b\u001a\u00020\u0007H\u0016¢\u0006\u0004\b\t\u0010\nJ\u0019\u0010\u000e\u001a\u00020\r2\b\u0010\f\u001a\u0004\u0018\u00010\u000bH\u0016¢\u0006\u0004\b\u000e\u0010\u000fJ!\u0010\u0012\u001a\u00020\u00042\u0006\u0010\u0011\u001a\u00020\u00102\b\u0010\f\u001a\u0004\u0018\u00010\u000bH\u0016¢\u0006\u0004\b\u0012\u0010\u0013J\u000f\u0010\u0014\u001a\u00020\u0004H\u0016¢\u0006\u0004\b\u0014\u0010\u0003R\u0018\u0010\u0016\u001a\u0004\u0018\u00010\u00158\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0016\u0010\u0017R\"\u0010\u0019\u001a\u00020\u00188\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\b\u0019\u0010\u001a\u001a\u0004\b\u001b\u0010\u001c\"\u0004\b\u001d\u0010\u001eR\"\u0010 \u001a\u00020\u001f8\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\b \u0010!\u001a\u0004\b\"\u0010#\"\u0004\b$\u0010%R\"\u0010'\u001a\u00020&8\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\b'\u0010(\u001a\u0004\b)\u0010*\"\u0004\b+\u0010,R\u001b\u00102\u001a\u00020-8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b.\u0010/\u001a\u0004\b0\u00101R#\u00108\u001a\n 4*\u0004\u0018\u000103038BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b5\u0010/\u001a\u0004\b6\u00107R\u001b\u0010=\u001a\u0002098BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b:\u0010/\u001a\u0004\b;\u0010<R\u0016\u0010?\u001a\u00020>8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b?\u0010@R\u0014\u0010D\u001a\u00020A8BX\u0082\u0004¢\u0006\u0006\u001a\u0004\bB\u0010C¨\u0006E"}, d2 = {"Lsputnik/axmor/com/sputnik/ui/gorserv/ChangeGorservUserPhoneDialog;", "Landroidx/fragment/app/DialogFragment;", "<init>", "()V", "", "initView", "localize", "Landroid/content/Context;", "context", "onAttach", "(Landroid/content/Context;)V", "Landroid/os/Bundle;", "savedInstanceState", "Landroid/app/Dialog;", "onCreateDialog", "(Landroid/os/Bundle;)Landroid/app/Dialog;", "Landroid/view/View;", "view", "onViewCreated", "(Landroid/view/View;Landroid/os/Bundle;)V", "onDestroy", "Landroidx/viewbinding/ViewBinding;", "_binding", "Landroidx/viewbinding/ViewBinding;", "Lcom/sputnik/common/localization/LocalizationStorage;", "localizationStorage", "Lcom/sputnik/common/localization/LocalizationStorage;", "getLocalizationStorage", "()Lcom/sputnik/common/localization/LocalizationStorage;", "setLocalizationStorage", "(Lcom/sputnik/common/localization/LocalizationStorage;)V", "Lcom/sputnik/common/viewmodels/MultiViewModelFactory;", "factory", "Lcom/sputnik/common/viewmodels/MultiViewModelFactory;", "getFactory", "()Lcom/sputnik/common/viewmodels/MultiViewModelFactory;", "setFactory", "(Lcom/sputnik/common/viewmodels/MultiViewModelFactory;)V", "Lcom/sputnik/common/analytics/Analytics;", "analytics", "Lcom/sputnik/common/analytics/Analytics;", "getAnalytics", "()Lcom/sputnik/common/analytics/Analytics;", "setAnalytics", "(Lcom/sputnik/common/analytics/Analytics;)V", "Lcom/sputnik/common/viewmodels/GorservViewModel;", "gorservViewModel$delegate", "Lkotlin/Lazy;", "getGorservViewModel", "()Lcom/sputnik/common/viewmodels/GorservViewModel;", "gorservViewModel", "Lio/michaelrocks/libphonenumber/android/PhoneNumberUtil;", "kotlin.jvm.PlatformType", "phoneNumberUtil$delegate", "getPhoneNumberUtil", "()Lio/michaelrocks/libphonenumber/android/PhoneNumberUtil;", "phoneNumberUtil", "Lme/ibrahimsn/lib/PhoneNumberKit;", "phoneNumberKit$delegate", "getPhoneNumberKit", "()Lme/ibrahimsn/lib/PhoneNumberKit;", "phoneNumberKit", "", "newPhone", "Ljava/lang/String;", "Lsputnik/axmor/com/databinding/DialogChangeGorservUserPhoneBinding;", "getBinding", "()Lsputnik/axmor/com/databinding/DialogChangeGorservUserPhoneBinding;", "binding", "app_huaweiRelease"}, k = 1, mv = {1, 9, 0}, xi = 48)
+/* loaded from: classes5.dex */
+public final class ChangeGorservUserPhoneDialog extends DialogFragment {
+    private ViewBinding _binding;
+    public Analytics analytics;
+    public MultiViewModelFactory factory;
+
+    /* renamed from: gorservViewModel$delegate, reason: from kotlin metadata */
+    private final Lazy gorservViewModel;
+    public LocalizationStorage localizationStorage;
+
+    /* renamed from: phoneNumberUtil$delegate, reason: from kotlin metadata */
+    private final Lazy phoneNumberUtil = LazyKt.lazy(new Function0<PhoneNumberUtil>() { // from class: sputnik.axmor.com.sputnik.ui.gorserv.ChangeGorservUserPhoneDialog$phoneNumberUtil$2
+        {
+            super(0);
+        }
+
+        /* JADX WARN: Can't rename method to resolve collision */
+        @Override // kotlin.jvm.functions.Function0
+        public final PhoneNumberUtil invoke() {
+            return PhoneNumberUtil.createInstance(this.this$0.requireContext());
+        }
+    });
+
+    /* renamed from: phoneNumberKit$delegate, reason: from kotlin metadata */
+    private final Lazy phoneNumberKit = LazyKt.lazy(new Function0<PhoneNumberKit>() { // from class: sputnik.axmor.com.sputnik.ui.gorserv.ChangeGorservUserPhoneDialog$phoneNumberKit$2
+        {
+            super(0);
+        }
+
+        @Override // kotlin.jvm.functions.Function0
+        public final PhoneNumberKit invoke() {
+            Context contextRequireContext = this.this$0.requireContext();
+            Intrinsics.checkNotNullExpressionValue(contextRequireContext, "requireContext(...)");
+            return new PhoneNumberKit.Builder(contextRequireContext).build();
+        }
+    });
+    private String newPhone = "";
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public final DialogChangeGorservUserPhoneBinding getBinding() {
+        ViewBinding viewBinding = this._binding;
+        Intrinsics.checkNotNull(viewBinding, "null cannot be cast to non-null type sputnik.axmor.com.databinding.DialogChangeGorservUserPhoneBinding");
+        return (DialogChangeGorservUserPhoneBinding) viewBinding;
+    }
+
+    public final LocalizationStorage getLocalizationStorage() {
+        LocalizationStorage localizationStorage = this.localizationStorage;
+        if (localizationStorage != null) {
+            return localizationStorage;
+        }
+        Intrinsics.throwUninitializedPropertyAccessException("localizationStorage");
+        return null;
+    }
+
+    public final MultiViewModelFactory getFactory() {
+        MultiViewModelFactory multiViewModelFactory = this.factory;
+        if (multiViewModelFactory != null) {
+            return multiViewModelFactory;
+        }
+        Intrinsics.throwUninitializedPropertyAccessException("factory");
+        return null;
+    }
+
+    private final GorservViewModel getGorservViewModel() {
+        return (GorservViewModel) this.gorservViewModel.getValue();
+    }
+
+    @Override // androidx.fragment.app.DialogFragment, androidx.fragment.app.Fragment
+    public void onAttach(Context context) {
+        Intrinsics.checkNotNullParameter(context, "context");
+        ContextKt.getAppComponent(context).inject(this);
+        super.onAttach(context);
+    }
+
+    @Override // androidx.fragment.app.DialogFragment
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
+        this._binding = DialogChangeGorservUserPhoneBinding.inflate(getLayoutInflater(), null, false);
+        AlertDialog alertDialogCreate = new AlertDialog.Builder(requireContext()).setView(getBinding().getRoot()).create();
+        if (alertDialogCreate != null && alertDialogCreate.getWindow() != null) {
+            Window window = alertDialogCreate.getWindow();
+            Intrinsics.checkNotNull(window);
+            window.setBackgroundDrawable(new ColorDrawable(0));
+            Window window2 = alertDialogCreate.getWindow();
+            Intrinsics.checkNotNull(window2);
+            WindowUtilsKt.requestFeatureSafe(window2, 1);
+        }
+        alertDialogCreate.setCanceledOnTouchOutside(true);
+        localize();
+        initView();
+        Intrinsics.checkNotNullExpressionValue(alertDialogCreate, "apply(...)");
+        return alertDialogCreate;
+    }
+
+    @Override // androidx.fragment.app.Fragment
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        Intrinsics.checkNotNullParameter(view, "view");
+        super.onViewCreated(view, savedInstanceState);
+    }
+
+    @Override // androidx.fragment.app.Fragment
+    public void onDestroy() {
+        super.onDestroy();
+        this._binding = null;
+    }
+
+    private final void initView() {
+        final DialogChangeGorservUserPhoneBinding binding = getBinding();
+        binding.btnApply.setOnClickListener(new View.OnClickListener() { // from class: sputnik.axmor.com.sputnik.ui.gorserv.ChangeGorservUserPhoneDialog$$ExternalSyntheticLambda0
+            @Override // android.view.View.OnClickListener
+            public final void onClick(View view) {
+                ChangeGorservUserPhoneDialog.initView$lambda$3$lambda$1(this.f$0, binding, view);
+            }
+        });
+        binding.btnBack.setOnClickListener(new View.OnClickListener() { // from class: sputnik.axmor.com.sputnik.ui.gorserv.ChangeGorservUserPhoneDialog$$ExternalSyntheticLambda1
+            @Override // android.view.View.OnClickListener
+            public final void onClick(View view) {
+                ChangeGorservUserPhoneDialog.initView$lambda$3$lambda$2(this.f$0, view);
+            }
+        });
+        MaskedTextChangedListener.Companion companion = MaskedTextChangedListener.INSTANCE;
+        EditText editText = getBinding().etPhone;
+        MaskedTextChangedListener.ValueListener valueListener = new MaskedTextChangedListener.ValueListener() { // from class: sputnik.axmor.com.sputnik.ui.gorserv.ChangeGorservUserPhoneDialog$initView$1$phoneNumberListener$1
+            @Override // com.redmadrobot.inputmask.MaskedTextChangedListener.ValueListener
+            public void onTextChanged(boolean maskFilled, String extractedValue, String formattedValue) {
+                Intrinsics.checkNotNullParameter(extractedValue, "extractedValue");
+                Intrinsics.checkNotNullParameter(formattedValue, "formattedValue");
+                this.this$0.getBinding().btnApply.setEnabled(extractedValue.length() > 10);
+                this.this$0.newPhone = extractedValue;
+            }
+        };
+        Intrinsics.checkNotNull(editText);
+        MaskedTextChangedListener maskedTextChangedListenerInstallOn = companion.installOn(editText, "+[0] ([000]) [000]-[00]-[00999999]", (220 & 4) != 0 ? CollectionsKt.emptyList() : null, (220 & 8) != 0 ? CollectionsKt.emptyList() : null, (220 & 16) != 0 ? AffinityCalculationStrategy.WHOLE_STRING : null, (220 & 32) != 0, (220 & 64) != 0 ? false : false, (220 & 128) != 0 ? null : null, (220 & 256) != 0 ? null : valueListener);
+        binding.etPhone.setText(String.valueOf(getGorservViewModel().getCurrentState().getCurrentPhone()));
+        getBinding().etPhone.removeTextChangedListener(maskedTextChangedListenerInstallOn);
+        getBinding().etPhone.addTextChangedListener(maskedTextChangedListenerInstallOn);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final void initView$lambda$3$lambda$1(ChangeGorservUserPhoneDialog this$0, DialogChangeGorservUserPhoneBinding this_with, View view) {
+        Intrinsics.checkNotNullParameter(this$0, "this$0");
+        Intrinsics.checkNotNullParameter(this_with, "$this_with");
+        this$0.getGorservViewModel().handlePhone(this_with.etPhone.getText().toString());
+        this$0.dismiss();
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final void initView$lambda$3$lambda$2(ChangeGorservUserPhoneDialog this$0, View view) {
+        Intrinsics.checkNotNullParameter(this$0, "this$0");
+        this$0.dismiss();
+    }
+
+    private final void localize() {
+        LocalizationLocalModel data = getLocalizationStorage().getData();
+        if (data != null) {
+            data.getOurHomeUpdatePopup();
+        }
+        DialogChangeGorservUserPhoneBinding binding = getBinding();
+        binding.title.setText("Изменить контактный номер");
+        binding.btnApply.setText("Изменить");
+        binding.btnBack.setText("Вернуться");
+    }
+
+    public ChangeGorservUserPhoneDialog() {
+        final Function0 function0 = null;
+        this.gorservViewModel = FragmentViewModelLazyKt.createViewModelLazy(this, Reflection.getOrCreateKotlinClass(GorservViewModel.class), new Function0<ViewModelStore>() { // from class: sputnik.axmor.com.sputnik.ui.gorserv.ChangeGorservUserPhoneDialog$special$$inlined$activityViewModels$default$1
+            {
+                super(0);
+            }
+
+            /* JADX WARN: Can't rename method to resolve collision */
+            @Override // kotlin.jvm.functions.Function0
+            public final ViewModelStore invoke() {
+                return this.requireActivity().getViewModelStore();
+            }
+        }, new Function0<CreationExtras>() { // from class: sputnik.axmor.com.sputnik.ui.gorserv.ChangeGorservUserPhoneDialog$special$$inlined$activityViewModels$default$2
+            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+            {
+                super(0);
+            }
+
+            /* JADX WARN: Can't rename method to resolve collision */
+            @Override // kotlin.jvm.functions.Function0
+            public final CreationExtras invoke() {
+                CreationExtras creationExtras;
+                Function0 function02 = function0;
+                return (function02 == null || (creationExtras = (CreationExtras) function02.invoke()) == null) ? this.requireActivity().getDefaultViewModelCreationExtras() : creationExtras;
+            }
+        }, new Function0<ViewModelProvider.Factory>() { // from class: sputnik.axmor.com.sputnik.ui.gorserv.ChangeGorservUserPhoneDialog$gorservViewModel$2
+            {
+                super(0);
+            }
+
+            /* JADX WARN: Can't rename method to resolve collision */
+            @Override // kotlin.jvm.functions.Function0
+            public final ViewModelProvider.Factory invoke() {
+                return this.this$0.getFactory();
+            }
+        });
+    }
+}

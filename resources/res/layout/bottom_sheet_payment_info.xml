@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:scrollbars="none"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/black"
+            android:id="@+id/tv_cancel_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/TextView.Header2"/>
+        <TextView
+            android:textColor="@color/track_gray"
+            android:id="@+id/tv_subtitle"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/info_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_cancel_title"
+            style="@style/TextView.Body2"/>
+        <include
+            android:id="@+id/info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_default"
+            app:layout_constraintTop_toBottomOf="@+id/tv_subtitle"
+            layout="@layout/layout_payment_info"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:enabled="true"
+            android:textColor="@color/track_gray"
+            android:id="@+id/subsStopButton"
+            android:layout_margin="@dimen/margin_default"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info_layout"
+            style="@style/Button.TransparentButton"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

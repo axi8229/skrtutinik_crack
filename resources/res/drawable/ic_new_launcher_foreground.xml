@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="108dp"
+    android:width="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:scaleX="0.0928"
+        android:scaleY="0.0928"
+        android:translateX="6.48"
+        android:translateY="6.48">
+        <path
+            android:fillColor="@drawable/_ic_new_launcher_foreground__0_res_0x7f080036"
+            android:pathData="M667.5,613.3L487.62,1023.98C367.34,1018.57 249.23,969.8 156.04,879.86L457.28,605.72L412.85,561.29L144.12,867.95C52.01,772.59 4.33,651.23 0,528.78L384.68,359.74L490.87,245.96L424.77,378.16L387.93,393.33C387.93,522.28 491.95,626.3 620.9,626.3L641.49,587.29L770.44,520.11L667.5,613.3ZM874.46,149.52C674,-50.95 350,-50.95 150.62,149.52C53.1,247.04 3.25,372.74 1.08,500.61L416.1,281.72C456.2,210.2 532.05,161.44 619.82,161.44C748.77,161.44 852.79,265.46 852.79,394.41C852.79,478.93 807.28,552.62 740.1,593.79L512.54,1025.07C643.66,1025.07 773.69,975.22 873.38,875.53C1073.85,673.98 1073.85,349.98 874.46,149.52Z"/>
+    </group>
+</vector>

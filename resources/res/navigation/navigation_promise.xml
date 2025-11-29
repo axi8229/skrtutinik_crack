@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_promise"
+    app:startDestination="@+id/promiseBlockFragment">
+    <fragment
+        android:name="com.sputnik.service_payments.ui.blocking.BlockingPromiseBlockFragment"
+        android:id="@+id/promiseBlockFragment">
+        <action
+            android:id="@+id/action_promiseBlockFragment_to_promiseBottomSheet"
+            app:destination="@+id/promiseBottomSheet"/>
+        <action
+            android:id="@+id/action_promiseBlockFragment_to_blocking_argue_debt"
+            app:destination="@+id/blocking_argue_debt"/>
+        <action
+            android:id="@+id/action_promiseBlockFragment_to_fragmentSuccessPayment"
+            app:destination="@+id/fragmentSuccessPayment"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim"/>
+    </fragment>
+    <dialog
+        android:name="com.sputnik.service_payments.ui.blocking.BottomSheetPromisePayment"
+        android:id="@+id/promiseBottomSheet">
+        <action
+            android:id="@+id/action_promiseBottomSheet_to_promiseSuccessDialog"
+            app:destination="@+id/promiseSuccessDialog"
+            app:popUpTo="@+id/navigation_promise"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_promiseBottomSheet_to_fragmentSuccessPayment"
+            app:destination="@+id/fragmentSuccessPayment"/>
+    </dialog>
+    <dialog
+        android:name="com.sputnik.service_payments.ui.blocking.DialogSuccessPromise"
+        android:id="@+id/promiseSuccessDialog"/>
+    <fragment
+        android:name="com.sputnik.service_payments.ui.SuccessPaymentFragment"
+        android:id="@+id/fragmentSuccessPayment"/>
+    <dialog
+        android:name="com.sputnik.service_payments.ui.blocking.BottomSheetArgueDebt"
+        android:id="@+id/blocking_argue_debt"/>
+</navigation>

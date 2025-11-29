@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="20dp"
+    android:width="29dp"
+    android:viewportWidth="29"
+    android:viewportHeight="20">
+    <path
+        android:fillColor="@drawable/_spay_ic_credit_card__0_res_0x7f08006f"
+        android:pathData="M4.5,0L24.5,0A4,4 0,0 1,28.5 4L28.5,16A4,4 0,0 1,24.5 20L4.5,20A4,4 0,0 1,0.5 16L0.5,4A4,4 0,0 1,4.5 0z"/>
+    <path
+        android:fillColor="@drawable/_spay_ic_credit_card__1_res_0x7f080070"
+        android:pathData="M28.481,3.61C26.8,5.753 24.261,7.5 20.5,7.5C12.428,7.5 9.987,11.12 9.569,17.999C9.52,18.816 9.111,19.543 8.499,20H4.5C2.291,20 0.5,18.209 0.5,16V4C0.5,1.791 2.291,0 4.5,0H24.5C26.578,0 28.285,1.584 28.481,3.61Z"/>
+    <path
+        android:fillColor="#727b82"
+        android:pathData="M6,5.5m-2.5,0a2.5,2.5 0,1 1,5 0a2.5,2.5 0,1 1,-5 0"
+        android:strokeAlpha="0.8"
+        android:fillAlpha="0.8"/>
+    <path
+        android:fillColor="#08a652"
+        android:pathData="M18,12L23,12A2.5,2.5 0,0 1,25.5 14.5L25.5,14.5A2.5,2.5 0,0 1,23 17L18,17A2.5,2.5 0,0 1,15.5 14.5L15.5,14.5A2.5,2.5 0,0 1,18 12z"/>
+</vector>

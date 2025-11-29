@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yoomoney.sdk.gui.widget.ShimmerLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:ym_shimmer_auto_start="true">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/shopping_card_small_padding"
+        app:srcCompat="@drawable/bg_shopping_card_shimmer_small"/>
+</ru.yoomoney.sdk.gui.widget.ShimmerLayout>

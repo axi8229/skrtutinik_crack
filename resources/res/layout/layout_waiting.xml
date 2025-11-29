@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Подключаемся :)"
+        style="@style/BoldTextPromo"/>
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Мы ждем подтверждения от платежной системы, это может занять 1-2 минуты. Вы можете подождать с нами, либо вернитесь попозже в раздел “Услуги"
+        style="@style/MediumTextPromo"/>
+    <ProgressBar
+        android:id="@+id/waiting_loader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

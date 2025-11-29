@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_navigation"
+    app:startDestination="@+id/navigation_camera">
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.main.cameras.GlobalCamerasFragment"
+        android:id="@+id/navigation_camera"/>
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.nointercom.ProfileNoIntercom"
+        android:id="@+id/navigation_profile"/>
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.main.market.NewMarketFragment"
+        android:id="@+id/navigation_market"/>
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.main.help.HelpFragment"
+        android:id="@+id/navigation_help"/>
+</navigation>

@@ -1,0 +1,151 @@
+package ru.yoomoney.sdk.kassa.payments.di.component;
+
+import androidx.lifecycle.ViewModelKeyedFactory;
+import androidx.lifecycle.ViewModelProvider;
+import dagger.internal.DoubleCheck;
+import dagger.internal.Factory;
+import dagger.internal.InstanceFactory;
+import dagger.internal.MapBuilder;
+import dagger.internal.Preconditions;
+import dagger.internal.Provider;
+import java.util.Map;
+import kotlin.jvm.internal.Intrinsics;
+import ru.yoomoney.sdk.kassa.payments.checkoutParameters.PaymentParameters;
+import ru.yoomoney.sdk.kassa.payments.checkoutParameters.UiParameters;
+import ru.yoomoney.sdk.kassa.payments.contract.P0;
+import ru.yoomoney.sdk.kassa.payments.contract.Q0;
+import ru.yoomoney.sdk.kassa.payments.di.module.C2277k;
+import ru.yoomoney.sdk.kassa.payments.di.module.C2278l;
+import ru.yoomoney.sdk.kassa.payments.di.module.C2280n;
+import ru.yoomoney.sdk.kassa.payments.di.module.C2281o;
+import ru.yoomoney.sdk.kassa.payments.di.module.F;
+import ru.yoomoney.sdk.kassa.payments.di.module.G;
+import ru.yoomoney.sdk.kassa.payments.di.module.H;
+import ru.yoomoney.sdk.kassa.payments.di.module.I;
+import ru.yoomoney.sdk.kassa.payments.di.module.J;
+import ru.yoomoney.sdk.kassa.payments.di.module.K;
+import ru.yoomoney.sdk.kassa.payments.di.module.L;
+import ru.yoomoney.sdk.kassa.payments.di.module.M;
+import ru.yoomoney.sdk.kassa.payments.di.module.l0;
+import ru.yoomoney.sdk.kassa.payments.paymentAuth.di.l;
+import ru.yoomoney.sdk.kassa.payments.paymentAuth.di.m;
+import ru.yoomoney.sdk.kassa.payments.paymentAuth.di.n;
+import ru.yoomoney.sdk.kassa.payments.tokenize.di.e;
+import ru.yoomoney.sdk.kassa.payments.tokenize.di.g;
+import ru.yoomoney.sdk.kassa.payments.unbind.di.f;
+import ru.yoomoney.sdk.kassa.payments.userAuth.di.d;
+import ru.yoomoney.sdk.kassa.payments.userAuth.di.h;
+import ru.yoomoney.sdk.kassa.payments.userAuth.di.i;
+import ru.yoomoney.sdk.kassa.payments.userAuth.di.j;
+import ru.yoomoney.sdk.kassa.payments.userAuth.di.k;
+
+/* loaded from: classes5.dex */
+public final class a {
+    public f A;
+    public final UiParameters a;
+    public final J b;
+    public final PaymentParameters c;
+    public final c d;
+    public Provider e;
+    public Provider f;
+    public Factory g;
+    public Provider h;
+    public L i;
+    public Provider j;
+    public Provider k;
+    public Provider l;
+    public Provider m;
+    public Provider n;
+    public Factory o;
+    public Factory p;
+    public Provider q;
+    public Provider r;
+    public g s;
+    public k t;
+    public Provider u;
+    public Provider v;
+    public Provider w;
+    public Provider x;
+    public n y;
+    public Provider z;
+
+    public a(c cVar, e eVar, C2280n c2280n, ru.yoomoney.sdk.kassa.payments.contract.di.c cVar2, F f, J j, H h, d dVar, ru.yoomoney.sdk.kassa.payments.paymentAuth.di.f fVar, ru.yoomoney.sdk.kassa.payments.unbind.di.c cVar3, C2277k c2277k, PaymentParameters paymentParameters, UiParameters uiParameters) {
+        this.d = cVar;
+        this.a = uiParameters;
+        this.b = j;
+        this.c = paymentParameters;
+        a(eVar, c2280n, cVar2, f, j, h, dVar, fVar, cVar3, c2277k, paymentParameters, uiParameters);
+    }
+
+    public final void a(e eVar, C2280n c2280n, ru.yoomoney.sdk.kassa.payments.contract.di.c cVar, F f, J j, H h, d dVar, ru.yoomoney.sdk.kassa.payments.paymentAuth.di.f fVar, ru.yoomoney.sdk.kassa.payments.unbind.di.c cVar2, C2277k c2277k, PaymentParameters paymentParameters, UiParameters uiParameters) {
+        c cVar3 = this.d;
+        Provider provider = DoubleCheck.provider(new ru.yoomoney.sdk.kassa.payments.userAuth.di.f(dVar, cVar3.g, cVar3.t));
+        this.e = provider;
+        this.f = DoubleCheck.provider(new j(dVar, this.d.u, provider));
+        Factory factoryCreate = InstanceFactory.create(paymentParameters);
+        this.g = factoryCreate;
+        c cVar4 = this.d;
+        this.h = DoubleCheck.provider(new I(h, cVar4.d, factoryCreate, cVar4.g, cVar4.p, cVar4.y, cVar4.C));
+        c cVar5 = this.d;
+        Provider provider2 = DoubleCheck.provider(new G(f, cVar5.C, cVar5.g));
+        Factory factory = this.g;
+        Provider provider3 = this.h;
+        c cVar6 = this.d;
+        this.i = new L(j, factory, provider3, cVar6.D, provider2, cVar6.u, cVar6.j, cVar6.E);
+        this.j = DoubleCheck.provider(new h(dVar));
+        c cVar7 = this.d;
+        Provider provider4 = DoubleCheck.provider(new ru.yoomoney.sdk.kassa.payments.paymentAuth.di.h(fVar, cVar7.g, cVar7.t));
+        this.k = provider4;
+        c cVar8 = this.d;
+        this.l = DoubleCheck.provider(new ru.yoomoney.sdk.kassa.payments.contract.di.d(cVar, DoubleCheck.provider(new ru.yoomoney.sdk.kassa.payments.contract.di.e(cVar, cVar8.d, cVar8.z, cVar8.u, cVar8.t, provider4, cVar8.F, this.g, cVar8.o, cVar8.r, cVar8.q, cVar8.s, cVar8.j))));
+        this.m = DoubleCheck.provider(new C2281o(c2280n, this.d.d, this.g));
+        c cVar9 = this.d;
+        Provider provider5 = DoubleCheck.provider(new ru.yoomoney.sdk.kassa.payments.unbind.di.d(cVar2, cVar9.g, cVar9.C));
+        this.n = provider5;
+        c cVar10 = this.d;
+        M m = new M(j, provider5, cVar10.j);
+        Provider provider6 = cVar10.y;
+        this.o = InstanceFactory.create(new ru.yoomoney.sdk.kassa.payments.di.j(new ru.yoomoney.sdk.kassa.payments.di.k(this.i, this.g, cVar10.m, this.f, this.j, this.l, this.m, m, cVar10.E, new K(j, provider6), provider6, cVar10.d)));
+        c cVar11 = this.d;
+        Provider provider7 = DoubleCheck.provider(new ru.yoomoney.sdk.kassa.payments.userAuth.di.e(dVar, cVar11.d, cVar11.z));
+        c cVar12 = this.d;
+        Provider provider8 = DoubleCheck.provider(new ru.yoomoney.sdk.kassa.payments.contract.di.g(cVar, cVar12.j, this.e, provider7, cVar12.t));
+        c cVar13 = this.d;
+        this.p = InstanceFactory.create(new P0(new Q0(cVar13.d, provider8, this.g, this.l, cVar13.m, this.f, this.m, cVar13.j, cVar13.t, this.j, cVar13.E, cVar13.y)));
+        c cVar14 = this.d;
+        this.q = DoubleCheck.provider(new ru.yoomoney.sdk.kassa.payments.tokenize.di.f(eVar, this.d.j, DoubleCheck.provider(new ru.yoomoney.sdk.kassa.payments.contract.di.f(cVar, cVar14.g, this.g, cVar14.G, cVar14.C, this.k, cVar14.F)), this.e, this.k));
+        this.r = DoubleCheck.provider(new C2278l(c2277k, this.d.m, this.f, this.j));
+        Factory factoryCreate2 = InstanceFactory.create(uiParameters);
+        Provider provider9 = this.q;
+        c cVar15 = this.d;
+        Provider provider10 = cVar15.m;
+        Provider provider11 = this.r;
+        Factory factory2 = this.g;
+        this.s = new g(eVar, provider9, provider10, provider11, factory2, factoryCreate2, cVar15.t, this.f, this.j);
+        Provider provider12 = DoubleCheck.provider(new ru.yoomoney.sdk.kassa.payments.userAuth.di.g(dVar, DoubleCheck.provider(new i(dVar, cVar15.d, factory2, cVar15.z))));
+        c cVar16 = this.d;
+        this.t = new k(dVar, cVar16.m, this.g, cVar16.F, cVar16.u, cVar16.t, this.i, provider12, cVar16.j);
+        Provider provider13 = DoubleCheck.provider(new ru.yoomoney.sdk.kassa.payments.paymentAuth.di.j(fVar, cVar16.z, cVar16.H, cVar16.x));
+        c cVar17 = this.d;
+        Provider provider14 = DoubleCheck.provider(new ru.yoomoney.sdk.kassa.payments.paymentAuth.di.g(fVar, cVar17.G, cVar17.F, provider13));
+        this.u = provider14;
+        this.v = DoubleCheck.provider(new m(fVar, DoubleCheck.provider(new ru.yoomoney.sdk.kassa.payments.paymentAuth.di.i(fVar, this.d.g, provider14))));
+        Provider provider15 = DoubleCheck.provider(new ru.yoomoney.sdk.kassa.payments.paymentAuth.di.k(fVar, this.d.g, this.u));
+        this.w = provider15;
+        c cVar18 = this.d;
+        Provider provider16 = DoubleCheck.provider(new l(fVar, provider15, cVar18.u, this.k, cVar18.p));
+        this.x = provider16;
+        this.y = new n(fVar, this.v, provider16, this.d.m);
+        Provider provider17 = DoubleCheck.provider(new ru.yoomoney.sdk.kassa.payments.unbind.di.e(cVar2, this.n, this.d.j));
+        this.z = provider17;
+        this.A = new f(cVar2, this.d.m, provider17);
+    }
+
+    public final ViewModelProvider.Factory a() {
+        l0 l0Var = this.d.c;
+        Map creators = MapBuilder.newMapBuilder(4).put("TOKENIZE", this.s).put("MoneyAuth", this.t).put("PAYMENT_AUTH", this.y).put("UNBIND_CARD", this.A).build();
+        l0Var.getClass();
+        Intrinsics.checkNotNullParameter(creators, "creators");
+        return (ViewModelProvider.Factory) Preconditions.checkNotNullFromProvides(new ViewModelKeyedFactory(creators));
+    }
+}

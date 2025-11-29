@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_large">32dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="mtrl_alert_dialog_background_inset_bottom">24dp</dimen>
+    <dimen name="mtrl_alert_dialog_background_inset_top">24dp</dimen>
+    <dimen name="size_large_square">40dp</dimen>
+    <dimen name="text_main">14sp</dimen>
+    <dimen name="text_title_1">20sp</dimen>
+    <dimen name="text_title_2">16sp</dimen>
+</resources>

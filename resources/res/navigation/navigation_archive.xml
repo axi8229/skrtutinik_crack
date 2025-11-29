@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/archive_navigation"
+    app:startDestination="@+id/archiveServiceFragment">
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.main.market.services.archive_service.ArchiveServiceFragment"
+        android:id="@+id/archiveServiceFragment">
+        <action
+            android:id="@+id/archiveServicesFragment_to_infoServices"
+            app:destination="@+id/subscription_navigation"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim"/>
+        <action
+            android:id="@+id/action_archiveServiceFragment_to_bottomArchiveFragment"
+            app:destination="@+id/bottomArchiveFragment"/>
+        <action
+            android:id="@+id/action_archiveServiceFragment_to_blockingNavigation"
+            app:destination="@+id/blocking_navigation"/>
+    </fragment>
+    <dialog
+        android:name="sputnik.axmor.com.sputnik.ui.main.market.services.archive_service.SelectArchiveBottomSheet"
+        android:id="@+id/bottomArchiveFragment">
+        <action
+            android:id="@+id/action_bottomArchiveFragment_to_flussonicFragment"
+            app:destination="@+id/flussonicFragment"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim"/>
+        <action
+            android:id="@+id/action_archiveServiceFragment_to_archiveErrorDialog"
+            app:destination="@+id/archiveErrorDialog"
+            app:popUpTo="@+id/bottomArchiveFragment"
+            app:popUpToInclusive="true"/>
+    </dialog>
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.main.market.services.archive_service.FlussonicActivity"
+        android:id="@+id/flussonicFragment"/>
+</navigation>

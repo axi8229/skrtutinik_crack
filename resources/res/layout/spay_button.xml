@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/spay__v_btn_pay_res_0x7f0a0871"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/SpayPayButton">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spay_sb_acll_content_margin">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/spay_actv_apply_payment_in_installments_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/spay_sb_actv_apply_payment_in_installments_min_width"
+            android:minHeight="@dimen/spay_sb_actv_apply_payment_in_installments_min_height"
+            android:text="@string/spay_pay_text"
+            style="@style/SpayCardButton.SemiboldTextStyle"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="center"
+            android:id="@+id/spay_aciv_bank_logo_clear"
+            android:layout_width="@dimen/spay_sb_aciv_bank_logo_clear_layout_width"
+            android:layout_height="@dimen/spay_sb_aciv_bank_logo_clear_layout_height"
+            android:layout_marginStart="@dimen/spay_sb_aciv_bank_logo_clear_margin_start"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.cardview.widget.CardView>

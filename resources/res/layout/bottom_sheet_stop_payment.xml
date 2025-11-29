@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+    <TextView
+        android:textColor="@color/black"
+        android:id="@+id/tv_cancel_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TextView.Header2"/>
+    <TextView
+        android:textColor="@color/black"
+        android:id="@+id/tv_subtitle"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cancel_title"
+        style="@style/TextView.Body2"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_apply"
+        android:layout_marginLeft="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginRight="@dimen/margin_default"
+        android:layout_marginHorizontal="@dimen/margin_default"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_subtitle"
+        style="@style/Button.BlueButton"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:enabled="true"
+        android:textColor="@color/track_gray"
+        android:id="@+id/subsStopButton"
+        android:layout_marginLeft="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginRight="@dimen/margin_default"
+        android:layout_marginHorizontal="@dimen/margin_default"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_apply"
+        style="@style/Button.TransparentButton"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

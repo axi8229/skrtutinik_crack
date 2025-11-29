@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/manage_cameras_navigation"
+    app:startDestination="@+id/manageCamerasFragment">
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.main.profile.manage_cameras.ManageCamerasFragment"
+        android:id="@+id/manageCamerasFragment">
+        <action
+            android:id="@+id/action_manageCamerasFragment_to_manageCamerasDetails"
+            app:destination="@+id/manageCamerasDetails"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim"/>
+        <action
+            android:id="@+id/action_manageCamerasFragment_to_blockingNavigation"
+            app:destination="@+id/blocking_navigation"/>
+        <action
+            android:id="@+id/action_manageCamerasFragment_to_clearCameraPreferencesDialog"
+            app:destination="@+id/clearCameraPreferencesDialog"/>
+    </fragment>
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.main.profile.manage_cameras.ManageCamerasDetails"
+        android:id="@+id/manageCamerasDetails"/>
+    <dialog
+        android:name="sputnik.axmor.com.sputnik.ui.main.profile.manage_cameras.ClearCameraPreferencesDialog"
+        android:id="@+id/clearCameraPreferencesDialog"/>
+</navigation>

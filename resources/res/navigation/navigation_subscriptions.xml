@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_market"
+    app:startDestination="@+id/fragmentSubscriptionDetails">
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.main.market.NewMarketFragment"
+        android:id="@+id/fragmentNewMarket">
+        <action
+            android:id="@+id/action_fragmentNewMarket_to_fragmentSubscriptionDetails"
+            app:destination="@+id/fragmentSubscriptionDetails"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim"/>
+    </fragment>
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.subscriptions.SubscriptionDetailsFragment"
+        android:id="@+id/fragmentSubscriptionDetails">
+        <action
+            android:id="@+id/action_fragmentSubscriptionDetails_to_bottomSheetAboutService"
+            app:destination="@+id/bottomSheetAboutService"/>
+        <action
+            android:id="@+id/action_fragmentSubscriptionDetails_to_bottomSheetSuccessPayment"
+            app:destination="@+id/bottomSheetSuccessPayment"/>
+    </fragment>
+    <dialog
+        android:label="BottomSheetAboutService"
+        android:name="com.sputnik.subscriptions.ui.sheets.BottomSheetAboutService"
+        android:id="@+id/bottomSheetAboutService">
+        <action
+            android:id="@+id/action_bottomSheetAboutService_to_bottomSheetSuccessPayment"
+            app:destination="@+id/bottomSheetSuccessPayment"/>
+    </dialog>
+    <dialog
+        android:label="BottomSheetSuccessPayment"
+        android:name="com.sputnik.subscriptions.ui.sheets.BottomSheetSuccessPayment"
+        android:id="@+id/bottomSheetSuccessPayment"/>
+</navigation>

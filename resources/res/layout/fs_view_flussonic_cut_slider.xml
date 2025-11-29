@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/fs_cut_slider_btn"
+        android:background="@null"
+        android:padding="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/fs_baloon_size"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:src="@drawable/fs_cut_slider_one"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:layout_weight="10"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/fs_cut_slider_pointer"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/fs_chart_height"
+        android:src="@drawable/fs_cut_pointer"/>
+</merge>

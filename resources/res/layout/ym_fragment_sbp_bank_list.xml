@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewAnimator xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootContainer"
+    android:layout_width="@dimen/ym_dialogWidth"
+    android:layout_height="wrap_content"
+    android:measureAllChildren="false"
+    android:transitionName="@string/ym_transition_name">
+    <androidx.compose.ui.platform.ComposeView
+        android:id="@+id/compose_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</ViewAnimator>

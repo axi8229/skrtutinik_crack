@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout/subscription_service_item_0"
+    android:background="@drawable/background_card_feature"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_default"
+    android:minHeight="116dp">
+    <TextView
+        android:textColor="@color/sputnik_green"
+        android:id="@+id/tv_title"
+        android:tag="binding_1"
+        android:padding="0dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="@dimen/margin_start_end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TextView.Title1.Bold"/>
+    <TextView
+        android:textSize="14sp"
+        android:textColor="@color/sputnik_black"
+        android:id="@+id/tv_subtitle"
+        android:tag="binding_2"
+        android:padding="0dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_top"
+        android:layout_marginEnd="@dimen/margin_default"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        style="@style/TextView.Title1"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_ble"
+    app:startDestination="@+id/bleServiceFragment">
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.main.market.services.ble.BleServiceFragment"
+        android:id="@+id/bleServiceFragment">
+        <action
+            android:id="@+id/bleServiceFragment_to_infoServices"
+            app:destination="@+id/subscription_navigation"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim"/>
+        <action
+            android:id="@+id/action_bleServiceFragment_to_noPermissionsDialog"
+            app:destination="@+id/noPermissionsDialog"/>
+        <action
+            android:id="@+id/action_bleServiceFragment_to_bottomSheetSetupRssi"
+            app:destination="@+id/bottomSheetSetupRssi"/>
+    </fragment>
+    <dialog
+        android:name="sputnik.axmor.com.sputnik.ui.main.market.services.ble.NoPermissionsDialog"
+        android:id="@+id/noPermissionsDialog"/>
+    <dialog
+        android:label="BottomSheetSetupRssi"
+        android:name="sputnik.axmor.com.sputnik.ui.main.market.services.ble.BottomSheetSetupRssi"
+        android:id="@+id/bottomSheetSetupRssi"/>
+</navigation>

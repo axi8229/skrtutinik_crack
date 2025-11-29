@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="numbers_of_phone">
+        <item>одну</item>
+        <item>две</item>
+        <item>три</item>
+        <item>четыре</item>
+        <item>пять</item>
+        <item>шесть</item>
+    </array>
+    <array name="numbers_of_phone_postfix">
+        <item>цифру</item>
+        <item>цифры</item>
+        <item>цифры</item>
+        <item>цифры</item>
+        <item>цифр</item>
+        <item>цифр</item>
+    </array>
+</resources>

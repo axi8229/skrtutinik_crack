@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/spay_slsvde_fl_root"
+    android:paddingLeft="@dimen/spay_large_margin"
+    android:paddingRight="@dimen/spay_large_margin"
+    android:paddingBottom="@dimen/spay_extra_large_margin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/spay_processing_sheet_height"
+    android:transitionName="payTransition"
+    android:paddingHorizontal="@dimen/spay_large_margin">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spay_content_top_margin_processing_bottom_sheet">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spay_large_margin"
+            android:src="@drawable/spay_ic_failure"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_gravity="center"
+            android:id="@+id/spay_slsvde_tv_otp_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/spay_sdk_version_deprecated_text"
+            style="@style/SpayBottomSheet.MainTextStyle"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.cardview.widget.CardView
+        android:layout_gravity="bottom"
+        android:id="@+id/spay_slsvde_cv_to_payment_methods"
+        app:cardBackgroundColor="@color/spay_main_bank_green_color"
+        style="@style/SpayCardPrimaryButton.Style">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/spay_slsvde_actv_to_payment_methods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/spay_label_close"
+            style="@style/SpayCardButton.MainTextStyle"/>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

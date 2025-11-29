@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/spay_bg_logger_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="184dp">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/show_logger"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spay_56dp"
+        android:layout_margin="@dimen/spay_logger_margin_16"
+        android:layout_marginTop="@dimen/spay_logger_margin_24"
+        app:layout_constraintBottom_toTopOf="@+id/send_logger_file"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/SpayPayButton">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/spay_logger_width_300"
+            android:minHeight="@dimen/spay_sb_actv_apply_payment_in_installments_min_height"
+            android:text="Просмотреть логги"
+            style="@style/SpayCardButton.SemiboldTextStyle"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/send_logger_file"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spay_56dp"
+        android:layout_margin="@dimen/spay_logger_margin_16"
+        android:layout_marginTop="@dimen/spay_logger_margin_24"
+        android:layout_marginBottom="@dimen/spay_logger_margin_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/show_logger"
+        style="@style/SpayPayButton">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/spay_logger_width_300"
+            android:minHeight="@dimen/spay_sb_actv_apply_payment_in_installments_min_height"
+            android:text="Отправить файл логгов"
+            style="@style/SpayCardButton.SemiboldTextStyle"/>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

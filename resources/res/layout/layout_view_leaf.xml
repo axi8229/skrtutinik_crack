@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="100dp">
+    <ImageView
+        android:id="@+id/iv_leaf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_number"
+        app:srcCompat="@drawable/ic_leaf_blue"/>
+    <TextView
+        android:textSize="@dimen/text_title_1"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:id="@+id/tv_number"
+        android:padding="0dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:fontWeight="600"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/iv_leaf"
+        app:layout_constraintStart_toStartOf="@+id/iv_leaf"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TextView"/>
+    <TextView
+        android:textColor="@color/black"
+        android:gravity="start|center_vertical"
+        android:id="@+id/tv_title"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/opensans_semibold"
+        android:paddingVertical="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_leaf"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TextView.Body1"/>
+</merge>

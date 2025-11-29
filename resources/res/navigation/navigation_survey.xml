@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/survey_navigation"
+    app:startDestination="@+id/surveyFragment">
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.main.cameras.survay.SurveyFragment"
+        android:id="@+id/surveyFragment">
+        <action
+            android:id="@+id/action_surveyFragment_to_surveyCommentFragment"
+            app:destination="@+id/surveyCommentFragment"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim"/>
+        <action
+            android:id="@+id/action_surveyFragment_to_surveyFinishFragment"
+            app:destination="@+id/surveyFinishFragment"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/exit_anim"
+            app:popEnterAnim="@anim/pop_enter_anim"
+            app:popExitAnim="@anim/pop_exit_anim"
+            app:popUpTo="@+id/surveyFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.main.cameras.survay.SurveyCommentFragment"
+        android:id="@+id/surveyCommentFragment"/>
+    <fragment
+        android:name="sputnik.axmor.com.sputnik.ui.main.cameras.survay.SurveyFinishFragment"
+        android:id="@+id/surveyFinishFragment"/>
+</navigation>
